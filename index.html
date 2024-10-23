@@ -9,13 +9,14 @@
     <title>Document</title>
 </head>
 
-<body>
 
+
+    
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
     <!-- Navbar -->
-
-    <nav class="navbar navbar-expand-sm bg-light justify-content-end">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-end fixed-top">
         <div class="container-fluid">
-            <img src="/images/logov2.png"" alt="logo" width="50" height="42">
+            <img src="/images/logov2.png"" alt=" logo" width="50" height="42">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -24,19 +25,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Education</a>
+                        <a class="nav-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Skills</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -44,13 +45,12 @@
     </nav>
 
     <!-- Home-->
-    <div class="container-fluid">
-        <div class="row align-items-center style=" height: 70vh;">
-            <div class="col-12 col-md-7 text-center mt-10">
+    <div id="home" class="container-fluid vh-100 d-flex align-items-center">
+        <div class="row align-items-center" style="height: 100%;">
+            <div class="col-12 col-md-7 text-center">
                 <h1 class="display-1">Hello, I'm <span class="text-primary">Flavio Pires</span></h1>
                 <p class="lead">I'm a web developer and designer. I can create beautiful and responsive websites.</p>
-                <button class="btn btn-primary mb-4">Download CV</button>
-
+                <a class="btn btn-primary mb-4" href="files/Flavio Pires.docx" download="Flavio Pires.docx">Download CV</a>
             </div>
             <div class="col-12 col-md-5 d-flex justify-content-end align-items-center p-0">
                 <img src="images/me.jpg" class="img-fluid" alt="Responsive Image"
@@ -60,7 +60,39 @@
     </div>
 
     <!-- About -->
-    <h1> "about"</h1>
+    <section id="about" class="vh-100 text-dark pt-5" style="background-color: #dadada;">
+        <div class="container-fluid">
+            <h2>About</h2>
+            <p>This is the about section...</p>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="vh-100 text-dark pt-5" style="background-color: #ffffff;">
+        <div class="container-fluid">
+            <h2>Education</h2>
+            <p>This is the education section...</p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="vh-100 text-white pt-5" style="background-color: #dadada;">
+        <div class="container-fluid">
+            <h2>Skills</h2>
+            <p>This is the skills section...</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="vh-100 text-dark pt-5"style="background-color: #ffffff;">
+        <div class="container-fluid">
+            <h2>Contact</h2>
+            <p>This is the contact section...</p>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
 
 
 
