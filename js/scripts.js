@@ -1,4 +1,4 @@
-const textArray = ["Flavio Pires ", "Web Developer ", "IT Support "];
+const textArray = ["Flavio Pires ", "a Web Developer ", "IT Support " ,"MCLOSH "];
 let textIndex = 0;
 let charIndex = 0;
 let currentText = '';
