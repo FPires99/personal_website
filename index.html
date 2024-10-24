@@ -20,13 +20,13 @@
 
 
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
     <!-- Navbar -->
-        <nav class="navbar navbar-expand-sm justify-content-end fixed-top" style="background-color: hsl(155, 21%, 49%);">
-        
+    <nav class="navbar navbar-expand-sm justify-content-end fixed-top" style="background-color: hsl(155, 21%, 49%);">
+
         <div class="container-fluid">
             <!-- <img src="/images/logov2.png"" alt=" logo" width="50" height="42"> -->
-             <h1 style="font-family: 'Lobster', cursive;">FP</h1>
+            <h1 style="font-family: 'Lobster', cursive;">FP</h1>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -35,19 +35,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#home"style="font-family: 'Lobster', cursive; font-size: 24px">Home</a>
+                        <a class="nav-link" href="#home"
+                            style="font-family: 'Lobster', cursive; font-size: 24px">Home</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#about"style="font-family: 'Lobster', cursive; font-size: 24px">About</a>
+                        <a class="nav-link" href="#about"
+                            style="font-family: 'Lobster', cursive; font-size: 24px">About</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#education"style="font-family: 'Lobster', cursive; font-size: 24px">Education</a>
+                        <a class="nav-link" href="#education"
+                            style="font-family: 'Lobster', cursive; font-size: 24px">Education</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#skills"style="font-family: 'Lobster', cursive; font-size: 24px">Skills</a>
+                        <a class="nav-link" href="#skills"
+                            style="font-family: 'Lobster', cursive; font-size: 24px">Skills</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#contact"style="font-family: 'Lobster', cursive; font-size: 24px">Contact</a>
+                        <a class="nav-link" href="#contact"
+                            style="font-family: 'Lobster', cursive; font-size: 24px">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -55,14 +60,17 @@
     </nav>
 
     <!-- Home-->
-    <div id="home" class="container-fluid vh-100 d-flex align-items-stretch overflow-hidden">
+    <div id="home" class="container-fluid vh-100 d-flex align-items-stretch overflow-hidden" style="padding-top: 80px;">
         <div class="row align-items-center g-0" style="height: 100%;">
             <div class="col-12 col-md-7 text-center">
-                
-                <h1 class="display-1">Hello, I'm <span id="dynamic-text" style="color: hsl(155, 21%, 49%);">Flavio Pires</span></h1>
 
-                <p class="lead">Ola !I'm a web developer and designer. I can create beautiful and responsive websites.</p>
-                <a class="btn mb-4 text-white" style="background-color: hsl(155, 21%, 49%);" href="files/Flavio Pires.docx" download="Flavio Pires.docx">Download CV</a>
+                <h1 class="display-1">Hello, I'm <span id="dynamic-text" style="color: hsl(155, 21%, 49%);">Flavio
+                        Pires</span></h1>
+
+                <p class="lead">Ola !I'm a web developer and designer. I can create beautiful and responsive websites.
+                </p>
+                <a class="btn mb-4 text-white" style="background-color: hsl(155, 21%, 49%);"
+                    href="files/Flavio Pires.docx" download="Flavio Pires.docx">Download CV</a>
 
             </div>
             <div class="col-12 col-md-5 d-flex justify-content-end align-items-stretch p-0 overflow-hidden">
@@ -92,7 +100,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="vh-100 text-white pt-5" style="background-color: #f0e8e87c;">
+    <section id="skills" class="vh-100 text-dark pt-5" style="background-color: #f0e8e87c;">
         <div class="container-fluid">
             <h2>Skills</h2>
             <p>This is the skills section...</p>
@@ -100,14 +108,15 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="vh-100 text-dark pt-5" style="background-color: #ffffff;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="class col sm-6 text-center">
+    <section id="contact" class="text-dark pt-5" style="background-color: #ffffff;">
+        <!-- <div class="container-fluid" style="height: 100vh;"> -->
+        <div class="container-fluid" style="height: 100vh;">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-sm-6 text-center">
                     <h1>Get in Touch</h1>
                     <p>Fill out the form to contact me directly...</p>
                     <div class="row justify-content-center my-5">
-                        <div class="col-lg-6">
+                        <div class="col-lg-8"> 
                             <form action="https://formspree.io/f/mdkokwbl" method="POST">
                                 <label for="email" class="form-label">Email address</label>
                                 <div class="mb-4 input-group">
@@ -118,34 +127,67 @@
                                         placeholder="e.g. flavio@gmail.com" required>
                                 </div>
 
-
                                 <label for="name" class="form-label">Name</label>
-                                <div class="mb-4 input-group mb-4">
+                                <div class="mb-4 input-group">
                                     <span class="input-group-text">
                                         <i class="bi bi-chat-right"></i>
                                     </span>
                                     <input type="text" class="form-control" id="name" name="name"
                                         placeholder="e.g. Flavio" required>
                                 </div>
+
                                 <label for="query" class="form-label">Your query...</label>
                                 <textarea id="query" class="form-control" name="query" style="height: 140px;"
                                     required></textarea>
-                                <div class="mb-4 pt-3 text-center">
-                                    <button type="submit" class="btn mb-4 text-white"style="background-color: hsl(155, 21%, 49%);";>Submit</button>
+                                <div class="mb-4 pt-3">
+                                    <button type="submit" class="btn mb-4 text-white"
+                                        style="background-color: hsl(155, 21%, 49%);">Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="class col sm-6">
-                    <h1>ola</h1>
-
+                <div class="col-sm-6">
+                    <span style="font-size: 50px;">
+                        <i class="bi bi-envelope-at"></i>
+                    </span>
+                    <h4>Email me at</h4>
+                    <p>flavio.pires.1999@gmail.com</p>
                 </div>
             </div>
         </div>
     </section>
 
+    
+
+
     <!-- Footer -->
+    <footer class="text-center text-white bg-dark">
+        <div class="container-fluid p-4 pb-4">
+
+            <section class="mb-0">
+                <div class="row">
+                    <div class="col-0">
+                        <h6>2024 © Design by Flavio Pires.</h3>
+                    </div>
+
+                    <div class="col-12">
+                        <a class="btn btn-outline-light btn-floating m-1" href="mailto:flavio@gmail.com" role="button">
+                            <i class="bi bi-google"></i>
+                        </a>
+                        
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/flavio-j-f-pires/" role="button">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/FPires99" role="button">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </footer>
 
 
 

@@ -22,7 +22,7 @@ function type() {
     if (!isDeleting && charIndex === currentFullText.length) {
         // Pause before starting to delete
         isDeleting = true;
-        setTimeout(type, 3000); // Wait 1 second before starting to delete
+        setTimeout(type, 3000); // Wait before starting to delete
     } else if (isDeleting && charIndex < 0) {
         // When finished deleting, move to the next text
         isDeleting = false;
@@ -31,7 +31,7 @@ function type() {
         setTimeout(type, 1000); // Wait before starting to type the next word
     } else {
         
-        setTimeout(type, isDeleting ? 100 : 150); // typing speed
+        setTimeout(type, isDeleting ? 70 : 70); // typing speed
     }
 }
 
