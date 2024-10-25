@@ -20,12 +20,11 @@
 
 
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm justify-content-end fixed-top" style="background-color: hsl(155, 21%, 49%);">
 
         <div class="container-fluid">
-            <!-- <img src="/images/logov2.png"" alt=" logo" width="50" height="42"> -->
             <h1 style="font-family: 'Lobster', cursive;">FP</h1>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -35,76 +34,72 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#home"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Home</a>
+                        <a class="nav-link" href="#home"style="font-family: 'Lobster', cursive; font-size: 24px">Home</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#about"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">About</a>
+                        <a class="nav-link" href="#about"style="font-family: 'Lobster', cursive; font-size: 24px">About</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#education"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Education</a>
+                        <a class="nav-link" href="#education"style="font-family: 'Lobster', cursive; font-size: 24px">Education</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#skills"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Skills</a>
+                        <a class="nav-link" href="#skills"style="font-family: 'Lobster', cursive; font-size: 24px">Skills</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#contact"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Contact</a>
+                        <a class="nav-link" href="#contact"style="font-family: 'Lobster', cursive; font-size: 24px">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Home-->
-    <div id="home" class="container-fluid vh-100 d-flex align-items-stretch overflow-hidden" style="padding-top: 80px;">
+    <!-- Home Section -->
+    <section id="home" class="container-fluid vh-100 d-flex align-items-stretch overflow-hidden" style="padding-top: 80px;">
         <div class="row align-items-center g-0" style="height: 100%;">
-            <div class="col-12 col-md-7 text-center">
-
-                <h1 class="display-1">Hello, I'm <span id="dynamic-text" style="color: hsl(155, 21%, 49%);">Flavio
-                        Pires</span></h1>
-
-                <p class="lead">Ola !I'm a web developer and designer. I can create beautiful and responsive websites.
-                </p>
-                <a class="btn mb-4 text-white" style="background-color: hsl(155, 21%, 49%);"
-                    href="files/Flavio Pires.docx" download="Flavio Pires.docx">Download CV</a>
-
+            <div class="col-12 col-md-7 text-center py-4">
+                <h1 class="display-1">
+                    Hello, I'm <span id="dynamic-text" style="color: hsl(155, 21%, 49%);">Flavio Pires</span>
+                </h1>
+                <p class="lead">I'm a web developer and designer. I can create beautiful and responsive websites.</p>
+                <a class="btn mb-4 text-white" style="background-color: hsl(155, 21%, 49%);" href="files/Flavio Pires.docx" download="Flavio Pires.docx">Download CV</a>
             </div>
             <div class="col-12 col-md-5 d-flex justify-content-end align-items-stretch p-0 overflow-hidden">
-                <img src="images/me.jpg" class="img-fluid" alt="Responsive Image"
-                    style="max-height: 100%; max-width: 100%;">
+                <img src="images/me.jpg" class="img-fluid" alt="Responsive Image" style="max-height: 100%; max-width: 100%;">
             </div>
         </div>
-    </div>
+    </section>
+
+
+    
+    
+    
 
 
     <!-- About -->
-    <section id="about" class="vh-100 text-dark pt-5" style="background-color: #f0e8e87c;">
+    <section id="about" class="vh-100 text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
         <div class="container-fluid">
             <h2>About</h2>
             <p>This is the about section...</p>
         </div>
     </section>
 
+
     <!-- Education -->
-    <section id="education" class="vh-100 text-dark pt-5" style="background-color: #ffffff;">
+    <section id="education" class="vh-100 text-dark" style="background-color: hsl(155, 34%, 81%); padding-top: 80px;">
         <div class="container-fluid">
             <div class="row h-100">
                 <div class="col-6">
                     <h1 style="text-align: center;">Education</h1>
-                    <div class="card mt-5" style="max-width: 600px; height: 400px; background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                        <h2>Leeds Beckett University</h2>
+                    <div class="card  mx-auto mt-5 text-center" style="max-width: 550px; height: 250px; background-color: #f8f9fa; border-radius: 50px;box-shadow: 0 10px 8px hsl(155, 21%, 49%);">
+                        <h2 class="mt-3">Leeds Beckett University</h2>
                         <h3>Bachelor of Computer Science</h3>
                         <h4>2021-2023</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo 
+                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo 
                             eum voluptas suscipit impedit rem amet quae molestias minus.</p>
                     </div>
 
-                    <div class="card mt-5" style="max-width: 600px; height: 400px; background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                        <h2>Externato Dom Fuas Roupinho </h2>
+                    <div class="card  mx-auto mt-5 text-center" style="max-width: 550px; height: 250px; background-color: #f8f9fa; border-radius: 50px;box-shadow: 0 10px 8px hsl(155, 21%, 49%);">
+                        <h2 class="mt-3" >Externato Dom Fuas Roupinho </h2>
                         <h3>Secondary Education Diploma</h3>
                         <h4>2017-2020</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo 
@@ -115,8 +110,8 @@
 
                 <div class="col-6">
                     <h1 style="text-align: center;">Experience</h1>
-                    <div class="card mt-5" style="max-width: 600px; height: 400px; background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                        <h2>Dayton Progress internship (Portugal)</h2>
+                    <div class="card  mx-auto mt-5 text-center" style="max-width: 550px; height: 250px; background-color: #f8f9fa; border-radius: 50px;box-shadow: 0 10px 8px hsl(155, 21%, 49%);">
+                        <h2 class="mt-3">dayton</h2>
                         <h3>Bachelor of Computer Science</h3>
                         <h4>2019</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo 
@@ -129,7 +124,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="vh-100 text-dark pt-5" style="background-color: #f0e8e87c;">
+    <section id="skills" class="vh-100 text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
         <div class="container-fluid">
             <h2>Skills</h2>
             <p>This is the skills section...</p>
@@ -225,8 +220,6 @@
             </section>
         </div>
     </footer>
-
-
 
 
 </body>
