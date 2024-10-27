@@ -39,3 +39,8 @@ function type() {
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(type, 500); // Start typing after 500ms
 });
+
+
+
+
+
