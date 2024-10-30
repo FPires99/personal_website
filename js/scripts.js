@@ -43,4 +43,75 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+function setLanguage(language) {
+    const flagIcon = document.getElementById('flag-icon');
 
+    // Update flag icon
+    if (language === 'en') {
+        flagIcon.src = '/images/UkLogo.png';
+    } else if (language === 'pt') {
+        flagIcon.src = '/images/PTlogo.png';
+    }
+
+    
+    const aboutTextHome = document.getElementById('introHome');
+    aboutTextHome.innerText = aboutTextHome.getAttribute(`data-lang-${language}`);
+    
+    const aboutTextAbout = document.getElementById('aboutText1');
+    aboutTextAbout.innerText = aboutTextAbout.getAttribute(`data-lang-${language}`);
+
+    const aboutTextAbout2 = document.getElementById('aboutText2');
+    aboutTextAbout2.innerText = aboutTextAbout2.getAttribute(`data-lang-${language}`);
+
+    const educationTitle = document.getElementById('educationTitle');
+    educationTitle.innerText = educationTitle.getAttribute(`data-lang-${language}`);
+
+    const ExperienceTitle = document.getElementById('ExperienceTitle');
+    ExperienceTitle.innerText = ExperienceTitle.getAttribute(`data-lang-${language}`);
+
+    const university2label = document.getElementById('university2label');
+    university2label.innerText = university2label.getAttribute(`data-lang-${language}`);
+
+    const universityDescription = document.getElementById('universityDescription');
+    universityDescription.innerText = universityDescription.getAttribute(`data-lang-${language}`);
+    
+    const educationSecondary = document.getElementById('educationSecondary');
+    educationSecondary.innerText = educationSecondary.getAttribute(`data-lang-${language}`);
+
+    const educationSecondary2 = document.getElementById('educationSecondary2');
+    educationSecondary2.innerText = educationSecondary2.getAttribute(`data-lang-${language}`);
+
+    const secondaryDescription = document.getElementById('secondaryDescription');
+    secondaryDescription.innerText = secondaryDescription.getAttribute(`data-lang-${language}`);
+
+    const internshipLabel = document.getElementById('internshipLabel');
+    internshipLabel.innerText = internshipLabel.getAttribute(`data-lang-${language}`);
+
+    const internshipDescription = document.getElementById('internshipDescription');
+    internshipDescription.innerText = internshipDescription.getAttribute(`data-lang-${language}`);
+
+    const skillsTitle = document.getElementById('skillsTitle');
+    skillsTitle.innerText = skillsTitle.getAttribute(`data-lang-${language}`);
+    
+    const skillsTitle2 = document.getElementById('skillsTitle2');
+    skillsTitle2.innerText = skillsTitle2.getAttribute(`data-lang-${language}`);
+
+    const navbarHome = document.getElementById('navbarHome');
+    navbarHome.innerText = navbarHome.getAttribute(`data-lang-${language}`);
+
+    const navbarAbout = document.getElementById('navbarAbout');
+    navbarAbout.innerText = navbarAbout.getAttribute(`data-lang-${language}`);
+
+    const navbarEducation = document.getElementById('navbarEducation');
+    navbarEducation.innerText = navbarEducation.getAttribute(`data-lang-${language}`);
+
+    const navbarSkills = document.getElementById('navbarSkills');
+    navbarSkills.innerText = navbarSkills.getAttribute(`data-lang-${language}`);
+
+    const navbarContact = document.getElementById('navbarContact');
+    navbarContact.innerText = navbarContact.getAttribute(`data-lang-${language}`);
+
+
+
+
+    }

@@ -25,7 +25,6 @@
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm justify-content-end fixed-top" style="background-color: hsl(155, 21%, 49%);">
-
         <div class="container-fluid">
             <h1 style="font-family: 'Lobster', cursive;">FP</h1>
 
@@ -33,29 +32,62 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#home"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Home</a>
+                        <a id ="navbarHome"class="nav-link" href="#home"
+                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            data-lang-en="Home"
+                            data-lang-pt="Início"
+                            >Home</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#about"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">About</a>
+                        <a id="navbarAbout"class="nav-link" href="#about"
+                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            data-lang-en="About"
+                            data-lang-pt="Sobre Mim"
+                            >About</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#education"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Education</a>
+                        <a id= "navbarEducation"class="nav-link" href="#education"
+                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            data-lang-en="Education"
+                            data-lang-pt="Educação"
+                            >Education</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#skills"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Skills</a>
+                        <a id="navbarSkills"class="nav-link" href="#skills"
+                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            data-lang-en="Skills"
+                            data-lang-pt="Habilidades"
+                            >Skills</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="#contact"
-                            style="font-family: 'Lobster', cursive; font-size: 24px">Contact</a>
+                        <a id="navbarContact" class="nav-link" href="#contact"
+                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            data-lang-en="Contact"
+                            data-lang-pt="Contato"
+                            >Contact</a>
                     </li>
                 </ul>
+
+                <div class="dropdown mt-2 mt-md-0">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img id="flag-icon" src="/images/UkLogo.png" alt="Language Flag" width="20" height="20">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+                                <img src="/images/UkLogo.png" alt="UK Flag" width="10" height="10"> English
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" onclick="setLanguage('pt')">
+                                <img src="/images/PTlogo.png" alt="Portugal Flag" width="10" height="10"> Portuguese
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -63,29 +95,50 @@
     <!-- Home Section -->
     <section id="home" class="container-fluid vh-100 d-flex align-items-stretch overflow-hidden"
         style="padding-top: 80px;">
-        <div class="row align-items-center g-0" style="height: 100%;">
+        <div class="row align-items-center g-0 h-100">
+            <!-- Text Section -->
             <div class="col-12 col-md-7 text-center py-4">
                 <h1 class="display-1">
-                    Hello, I'm <span id="dynamic-text" style="color: hsl(155, 21%, 49%);">Flavio Pires</span>
+                    Hello, I'm <span id="dynamic-text" class="text-success">Flavio Pires</span>
                 </h1>
-                <p class="lead">I'm a web developer and designer. I can create beautiful and responsive websites.</p>
-                <a class="btn mb-4 text-white" style="background-color: hsl(155, 21%, 49%);"
-                    href="files/Flavio Pires.docx" download="Flavio Pires.docx">Download CV</a>
-                    <a class="btn mb-4 text-white" style="background-color: hsl(155, 21%, 49%);"
-                    href="files/Flavio Pires1.pdf" target="_blank">View CV</a>
+                <p id="introHome" class="lead"
+                    data-lang-en="I'm a web developer and designer. I create beautiful, responsive websites."
+                    data-lang-pt="Sou um desenvolvedor web e designer. Crio websites bonitos e responsivos.">
+                    I'm a web developer and designer. I create beautiful, responsive websites.
+                </p>
 
-                    
+
+
+                <!-- View CV Button -->
+                <a class="btn btn-success mb-4 text-white" href="files/Flavio Pires1.pdf" target="_blank"
+                    rel="noopener">
+                    View CV
+                </a>
+
+                <!-- Social Links -->
+                <div class="social-links mt-3">
+                    <a class="btn btn-outline-dark btn-floating m-1" href="mailto:flavio@gmail.com" role="button"
+                        aria-label="Email">
+                        <i class="bi bi-google"></i>
+                    </a>
+                    <a class="btn btn-outline-dark btn-floating m-1"
+                        href="https://www.linkedin.com/in/flavio-j-f-pires/" role="button" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a class="btn btn-outline-dark btn-floating m-1" href="https://github.com/FPires99" role="button"
+                        aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </div>
             </div>
-            <div class="col-12 col-md-5 d-flex justify-content-end align-items-stretch p-0 overflow-hidden">
-                <img src="images/me.jpg" class="img-fluid" alt="Responsive Image"
-                    style="max-height: 100%; max-width: 100%;">
+
+            <!-- Image Section -->
+            <div class="col-12 col-md-5 d-flex justify-content-end align-items-stretch p-0">
+                <img src="images/me.jpg" class="img-fluid" alt="Photo of Flavio Pires"
+                    style="max-height: 100%; object-fit: cover;">
             </div>
         </div>
     </section>
-
-
-
-
 
 
 
@@ -94,11 +147,15 @@
         <div class="container-fluid">
             <div class="text-center about-me">
                 <h1>About Me</h1>
-                <h1>Hello, I'm Flavio Pires</h1>
                 <h1>photo</h1>
-                <p class="lead">Passionate developer with a knack for creating engaging user experiences.</p>
+                
 
-                <h2 style="padding-bottom: 10px;">Hello! <b>I'm Flavio Pires.</b></h2>
+                <p id="aboutText1" class="lead"
+                    data-lang-en="Dedicated and driven web developer, focused on creating engaging user experiences through clean and practical functioning websites."
+                    data-lang-pt="Desenvolvedor apaixonado com talento para criar experiências de usuário envolventes.">
+                    Dedicated and driven web developer, focused on creating engaging user experiences through clean and practical functioning websites.
+                </p>
+
 
                 <div class="tags d-flex flex-wrap justify-content-center gap-5">
                     <span class="tag">Web Developer</span>
@@ -109,16 +166,37 @@
                     <span class="tag">CSS Specialist</span>
                 </div>
 
-
-                <p
-                    style="padding-top: 50px; padding-bottom: 50px; max-width: 600px; text-align: center; margin: 0 auto;">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores laborum libero repellat
-                    assumenda dignissimos magni eius ullam similique officia unde illo eaque sint modi animi natus enim,
-                    veritatis numquam delectus ipsa nostrum? Sequi pariatur possimus sed eius praesentium laboriosam
-                    voluptates laborum ipsam doloribus! Facere, quos explicabo nam obcaecati doloribus distinctio.
+                <p id="aboutText2" class="lead"
+                    data-lang-en="Welcome to my professional website! I am a 25-year-old web developer, who was born and raised 
+                    in Portugal. I have been passionate about the Tech industry for several years, and have desired to pursue 
+                    a career in this field since I was a young child. I always demonstrated a strong interest towards web 
+                    development and several other tech-related subjects, and never failed to pursue the goal – I’ve continuously 
+                    developed my knowledge through research, personal practice, and the pursuit of academic studies in a 
+                    foreign country (UK). As a recent graduate of Computer Science who has always expressed dedication and 
+                    motivation within both my professional and academic routes, I feel prepared to contribute my upstanding 
+                    skills and further my professional abilities in an opportunity to work as a Web Developer."
+                    
+                    data-lang-pt="Bem-vindo ao meu site profissional! Sou um desenvolvedor web de 25 anos, nascido e criado 
+                    em Portugal. Tenho uma grande paixão pela indústria tecnológica há vários anos e sempre desejei seguir 
+                    uma carreira nesta área desde criança. Sempre demonstrei um forte interesse pelo desenvolvimento web 
+                    e por vários outros temas relacionados com tecnologia, e nunca deixei de perseguir este objetivo – 
+                    desenvolvi continuamente o meu conhecimento através de pesquisa, prática pessoal e estudos académicos 
+                    num país estrangeiro (Reino Unido). Como recém-licenciado em Ciências da Computação, que sempre 
+                    demonstrou dedicação e motivação tanto na minha trajetória profissional como académica, sinto-me 
+                    preparado para contribuir com as minhas competências e desenvolver ainda mais as minhas habilidades 
+                    profissionais numa oportunidade de trabalho como Desenvolvedor Web."
+                     
+                    style="padding-top: 50px; padding-bottom: 50px; max-width: 900px; text-align: center; margin: 0 auto;">
+                    
+                    Welcome to my professional website! I am a 25-year-old web developer, who was born and raised in Portugal. 
+                    I have been passionate about the Tech industry for several years, and have desired to pursue a career in 
+                    this field since I was a young child. I always demonstrated a strong interest towards web development and 
+                    several other tech-related subjects, and never failed to pursue the goal – I’ve continuously developed my 
+                    knowledge through research, personal practice, and the pursuit of academic studies in a foreign country (UK). 
+                    As a recent graduate of Computer Science who has always expressed dedication and motivation within both my professional 
+                    and academic routes, I feel prepared to contribute my upstanding skills and further my professional abilities in an 
+                    opportunity to work as a Web Developer.
                 </p>
-
-
             </div>
     </section>
 
@@ -127,141 +205,220 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 mb-4">
-                    <h2 class="text-center mb-4">Education</h2>
-                    <div class="card mx-auto p-4" style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-                        <h3>Leeds Beckett University</h3>
-                        <h4>Bachelor of Computer Science</h4>
-                        <p class="text-muted">2021-2023</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo eum voluptas suscipit impedit rem amet quae molestias minus.</p>
-                    </div>
+
+                    <h2 id="educationTitle"class="text-center mb-4"
+                        data-lang-en="Education"
+                        data-lang-pt="Educação">Education</h2>
                     
-                    <div class="card mx-auto p-4 mt-4" style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+
+                    <div class="card mx-auto p-4"
+                        style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                        <h3>Leeds Beckett University</h3>
+                        <h4 id="university2label"
+                        data-lang-en="BSc in  Computer Science"
+                        data-lang-pt="Licenciatura em Ciências da Computação"
+                        >BSc in  Computer Science</h4>
+                        <p class="text-muted">2021-2023</p>
+
+
+                        <p id="universityDescription"
+                        data-lang-en="This course incorporated numerous modules on software engineering, web development, 
+                        and networks, providing a broad understanding of the key areas in Computer Science. I developed a 
+                        strong foundation in front-end and back-end web technologies, gaining hands-on experience in modern 
+                        frameworks and tools. I also achieved first class grades in web development modules."
+                        data-lang-pt="Este curso incorporou vários módulos de engenharia de software, desenvolvimento web 
+                        e redes, proporcionando uma compreensão ampla das áreas-chave em Ciências da Computação. Desenvolvi
+                         uma base sólida em tecnologias de front-end e back-end, ganhando experiência prática com frameworks 
+                         e ferramentas modernas. Além disso, obtive classificações de primeira classe nos módulos de desenvolvimento web."
+
+                        >This course incorporated numerous modules on software engineering, web development, and 
+                            networks, providing a broad understanding of the key areas in Computer Science. I 
+                            developed a strong foundation in front-end and back-end web technologies, gaining hands-on 
+                            experience in modern frameworks and tools. I also achieved first class grades in web development modules.</p>
+                    </div>
+
+                    <div class="card mx-auto p-4 mt-4 "
+                        style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
                         <h3>Externato Dom Fuas Roupinho</h3>
-                        <h4>Secondary Education Diploma</h4>
+                        <h4 id="educationSecondary"
+                            data-lang-en=" Secondary Education Diploma: IT Technician - Systems"
+                            data-lang-pt="Diploma de Ensino Secundário: Técnico de Informática - Sistemas"
+                        >Secondary Education Diploma: </h4>
+
+                        <h4 id="educationSecondary2"
+                            data-lang-en="IT Technician - Systems"
+                            data-lang-pt="Técnico de Informática - Sistemas"
+                        >IT Technician - Systems </h4>
                         <p class="text-muted">2017-2020</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo eum voluptas suscipit impedit rem amet quae molestias minus.</p>
+
+                        <p id="secondaryDescription"
+                            data-lang-en="Some of the key focus areas of this course included installation, configuration, and management of operating systems 
+                            and database systems. Computer architecture and networks were also explored, including the installation and configuration 
+                            of local networks, peripheral devices, and internal computer architecture. Developed proficiency in C/C++ and Java, focusing 
+                            on core programming concepts such as loops, functions, data structures, and object-oriented programming was also a central part of this programme."
+                            
+                            data-lang-pt="Algumas das principais áreas de foco deste curso incluíram a instalação, configuração e gestão de sistemas operativos 
+                            e de sistemas de bases de dados. A arquitetura de computadores e as redes também foram exploradas, incluindo a instalação e configuração 
+                            de redes locais, dispositivos periféricos e arquitetura interna de computadores. Desenvolver proficiência em C/C++ e Java, com foco em conceitos 
+                            básicos de programação, como ciclos, funções, estruturas de dados e programação orientada a objetos, também foi uma parte central deste programa."
+
+                        >Some of the key focus areas of this course included installation, configuration, and management of operating systems 
+                            and database systems. Computer architecture and networks were also explored, including the installation and configuration 
+                            of local networks, peripheral devices, and internal computer architecture. Developed proficiency in C/C++ and Java, focusing 
+                            on core programming concepts such as loops, functions, data structures, and object-oriented programming was also a central part of this programme.</p>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-md-6 mb-4">
-                    <h2 class="text-center mb-4">Experience</h2>
-                    <div class="card mx-auto p-4" style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-                        <h3>Dayton</h3>
-                        <h4>Internship</h4>
+                    <h2 id = "ExperienceTitle"class="text-center mb-4"
+                        data-lang-en="Experience"
+                        data-lang-pt="Experiência"
+                    >Experience</h2>
+                    <div class="card mx-auto p-4"
+                        style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+                        <h3>Dayton Progress</h3>
+                        <h4 id="internshipLabel"
+                            data-lang-en="Professional Internship"
+                            data-lang-pt="Estágio Profissional"
+                        >Professional Internship</h4>
                         <p class="text-muted">2024</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium non explicabo eum voluptas suscipit impedit rem amet quae molestias minus.</p>
+                        <p id="internshipDescription"
+                        
+                            data-lang-en ="During this internship I was provided with the opportunity to develop skills within the workplace, 
+                            by repairing or resolving technical issues in the IT equipment used within the workplace. I was 
+                            also trusted in preparing new equipment for employees to use in their daily duties, such as installing 
+                            specific software’s and creating backups in the designated devices, as well as creating an inventory 
+                            of all of the IT equipment in the company to facilitate organized tracking."
+                            
+                            data-lang-pt ="Durante este estágio, tive a oportunidade de desenvolver competências no local de trabalho, 
+                            reparando ou resolvendo problemas técnicos no equipamento de TI utilizado no local de trabalho. 
+                            Também fui encarregado de preparar novo equipamento para os funcionários usarem em suas tarefas diárias, 
+                            como instalar softwares específicos e criar backups nos dispositivos designados, bem como criar um inventário 
+                            de todo o equipamento de TI na empresa para facilitar o rastreamento organizado."
+
+                            >During this internship I was provided with the opportunity to develop skills within the workplace, 
+                            by repairing or resolving technical issues in the IT equipment used within the workplace. I was 
+                            also trusted in preparing new equipment for employees to use in their daily duties, such as installing 
+                            specific software’s and creating backups in the designated devices, as well as creating an inventory 
+                            of all of the IT equipment in the company to facilitate organized tracking.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
 
     <!-- Skills -->
-<section id="skills" class="text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
-    <div class="container-fluid">
-        <!-- <h1>My Web Development Toolkit</h1>
+    <section id="skills" class="text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
+        <div class="container-fluid">
+            <!-- <h1>My Web Development Toolkit</h1>
         <h2>Core Skills</h2> -->
-        <h1 style="text-align: center; padding-bottom: 50px;">Check out my web development skills!</h1>
+            <h1 style="text-align: center; padding-bottom: 50px;"id ="skillsTitle"
+            data-lang-en="My Web Development Toolkit"
+            data-lang-pt="Minhas Ferramentas para Desenvolvimento Web"
+            >My Web Development Toolkit</h1>
 
-        <div class="row justify-content-center align-items-center">
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/html.png" alt="HTML logo" width="150" height="150">
-                    </span>
-                    <span class="description">HTML</span>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/html.png" alt="HTML logo" width="150" height="150">
+                        </span>
+                        <span class="description">HTML</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/css.png" alt="CSS logo" width="150" height="150">
+                        </span>
+                        <span class="description">CSS</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/javascript.png" alt="JavaScript logo" width="150" height="150">
+                        </span>
+                        <span class="description">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/php.png" alt="PHP logo" width="150" height="150">
+                        </span>
+                        <span class="description">PHP</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/nextjs.png" alt="Next.js logo" width="150" height="150">
+                        </span>
+                        <span class="description">Next.JS</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/laravel.png" alt="Laravel logo" width="150" height="150">
+                        </span>
+                        <span class="description">Laravel</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/bootstrap5.png" alt="Bootstrap logo" width="150" height="150">
+                        </span>
+                        <span class="description">Bootstrap CSS</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/tailwind.png" alt="Tailwind CSS logo" width="150" height="150">
+                        </span>
+                        <span class="description">Tailwind CSS</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/css.png" alt="CSS logo" width="150" height="150">
-                    </span>
-                    <span class="description">CSS</span>
-                </div>
-            </div>
+            <h2 style="text-align: center; padding-top: 50px;"id="skillsTitle2"
+                data-lang-en="Tools and Version Control"
+                data-lang-pt="Ferramentas e Controle de Versão"
+            >Tools and Version Control</h2>
+            <div class="row justify-content-center align-items-center">
 
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/javascript.png" alt="JavaScript logo" width="150" height="150">
-                    </span>
-                    <span class="description">JavaScript</span>
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/vscode.png" alt="Visual Studio Code logo" width="150" height="150">
+                        </span>
+                        <span class="description">Visual Studio Code</span>
+                    </div>
                 </div>
-            </div>
+                <div class="col-6 col-md-3 text-center">
+                    <div class="logo-container" style="margin: 30px;">
+                        <span class="logo">
+                            <img src="/images/github.png" alt="GitHub logo" width="150" height="150">
+                        </span>
+                        <span class="description">GitHub</span>
+                    </div>
+                </div>
 
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/php.png" alt="PHP logo" width="150" height="150">
-                    </span>
-                    <span class="description">PHP</span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/nextjs.png" alt="Next.js logo" width="150" height="150">
-                    </span>
-                    <span class="description">Next.JS</span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/laravel.png" alt="Laravel logo" width="150" height="150">
-                    </span>
-                    <span class="description">Laravel</span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/bootstrap5.png" alt="Bootstrap logo" width="150" height="150">
-                    </span>
-                    <span class="description">Bootstrap CSS</span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/tailwind.png" alt="Tailwind CSS logo" width="150" height="150">
-                    </span>
-                    <span class="description">Tailwind CSS</span>
-                </div>
             </div>
         </div>
-
-        <h2 style="text-align: center; padding-top: 50px;">Tools and Version Control</h2>
-        <div class="row justify-content-center align-items-center">
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/vscode.png" alt="Visual Studio Code logo" width="150" height="150">
-                    </span>
-                    <span class="description">Visual Studio Code</span>
-                </div>
-            </div>
-            <div class="col-6 col-md-3 text-center">
-                <div class="logo-container" style="margin: 30px;">
-                    <span class="logo">
-                        <img src="/images/github.png" alt="GitHub logo" width="150" height="150">
-                    </span>
-                    <span class="description">GitHub</span>
-                </div>
-            </div>
-            
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
