@@ -111,7 +111,39 @@ function setLanguage(language) {
     const navbarContact = document.getElementById('navbarContact');
     navbarContact.innerText = navbarContact.getAttribute(`data-lang-${language}`);
 
+    const cvButton = document.getElementById('cv-button');
+    cvButton.innerText = cvButton.getAttribute(`data-lang-${language}`);
+    
+// Left side of contact page
 
+    const contactQuestion = document.getElementById('contactQuestion');
+    contactQuestion.innerText = contactQuestion.getAttribute(`data-lang-${language}`);
+
+    const formText2 = document.getElementById('formText2');
+    formText2.innerText = formText2.getAttribute(`data-lang-${language}`);
+
+    const nameLabel = document.getElementById('nameLabel');
+    nameLabel.innerText = nameLabel.getAttribute(`data-lang-${language}`);
+
+    const formText = document.getElementById('formText');
+    formText.innerText = formText.getAttribute(`data-lang-${language}`);
+
+    const buttonSubmit = document.getElementById('buttonSubmit');
+    buttonSubmit.innerText = buttonSubmit.getAttribute(`data-lang-${language}`);
+
+
+    // Right side of contact page
+    const optionLabel = document.getElementById('optionLabel');
+    optionLabel.innerText = optionLabel.getAttribute(`data-lang-${language}`);
+
+    const sendEmail = document.getElementById('sendEmail');
+    sendEmail.innerText = sendEmail.getAttribute(`data-lang-${language}`);
+
+    const thankYou = document.getElementById('thankYou');
+    thankYou.innerText = thankYou.getAttribute(`data-lang-${language}`);
 
 
     }
+
+
+

@@ -45,7 +45,7 @@
                         <a id="navbarAbout"class="nav-link" href="#about"
                             style="font-family: 'Lobster', cursive; font-size: 24px"
                             data-lang-en="About"
-                            data-lang-pt="Sobre Mim"
+                            data-lang-pt="Sobre mim"
                             >About</a>
                     </li>
                     <li class="nav-item me-5">
@@ -66,7 +66,7 @@
                         <a id="navbarContact" class="nav-link" href="#contact"
                             style="font-family: 'Lobster', cursive; font-size: 24px"
                             data-lang-en="Contact"
-                            data-lang-pt="Contato"
+                            data-lang-pt="Contacto"
                             >Contact</a>
                     </li>
                 </ul>
@@ -108,12 +108,14 @@
                 </p>
 
 
-
                 <!-- View CV Button -->
-                <a class="btn btn-success mb-4 text-white" href="files/Flavio Pires1.pdf" target="_blank"
-                    rel="noopener">
+                <a id="cv-button" class="btn btn-success mb-4 text-white" href="files/Flavio Pires1.pdf" target="_blank"
+                    rel="noopener" data-lang-en="View CV" data-lang-pt="Ver CV">
                     View CV
                 </a>
+
+
+
 
                 <!-- Social Links -->
                 <div class="social-links mt-3">
@@ -428,8 +430,14 @@
             <div class="row justify-content-center align-items-start">
                 <!-- Column for the form -->
                 <div class="col-sm-12 col-md-6 text-center mb-5 mb-md-0">
-                    <h1 class="mb-4">Want to get in touch?</h1>
-                    <p>Fill out the form to contact me through this website</p>
+                    <h1 id="contactQuestion"class="mb-4"
+                        data-lang-en="Want to get in touch?"
+                        data-lang-pt="Quer entrar em contato?"
+                    >Want to get in touch?</h1>
+                    <p id="formText2" class="lead"
+                    data-lang-en="Fill out the form to contact me through this website"
+                    data-lang-pt="Preencha o formulário para entrar em contato comigo através deste site"
+                    >Fill out the form to contact me through this website</p>
                     <div class="row justify-content-center my-5">
                         <div class="col-lg-8">
                             <form action="https://formspree.io/f/mdkokwbl" method="POST">
@@ -442,7 +450,10 @@
                                         placeholder="e.g. flavio@gmail.com" required>
                                 </div>
 
-                                <label for="name" class="form-label">Name</label>
+                                <label id ="nameLabel"for="name" class="form-label
+                                data-lang-en="Name"
+                                data-lang-pt="Nome"
+                                ">Name</label>
                                 <div class="mb-4 input-group">
                                     <span class="input-group-text">
                                         <i class="bi bi-chat-right"></i>
@@ -451,12 +462,18 @@
                                         placeholder="e.g. Flavio" required>
                                 </div>
 
-                                <label for="query" class="form-label">Your query...</label>
+                                <label id= "formText"for="query" class="form-label"
+                                data-lang-en="Your query..."
+                                data-lang-pt="Sua pergunta..."
+                                >Your query...</label>
                                 <textarea id="query" class="form-control" name="query" style="height: 140px;"
                                     required></textarea>
                                 <div class="mb-4 pt-3">
-                                    <button type="submit" class="btn mb-4 text-white"
-                                        style="background-color: hsl(155, 21%, 49%);">Submit</button>
+                                    <button id= "buttonSubmit"type="submit" class="btn mb-4 text-white"
+                                        style="background-color: hsl(155, 21%, 49%);"
+                                        data-lang-en="Submit"
+                                        data-lang-pt="Enviar"
+                                        >Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -465,16 +482,25 @@
 
                 <!-- Column for the alternative contact method -->
                 <div class="col-sm-12 col-md-5 text-center mb-5 mb-md-0">
-                    <h1 class="mb-5">Alternatively</h1>
+                    <h1 id ="optionLabel"class="mb-5"
+                        data-lang-en="Alternatively"
+                        data-lang-pt="Opcionalmente"
+                    >Alternatively</h1>
                     <div class="card mx-auto mb-5"
                         style="max-width: 300px; min-height: 400px;background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                         <div class="card-body" style="padding: 20px;">
                             <span style="font-size: 50px; margin-bottom: 20px; display: inline-block;">
                                 <i class="bi bi-envelope-at"></i>
                             </span>
-                            <h4 style="font-weight: bold;">Email me</h4>
+                            <h4 id ="sendEmail"style="font-weight: bold;"
+                                data-lang-en="Email me"
+                                data-lang-pt="Mande um e-mail."
+                            >Email me</h4>
                             <p style="font-size: 1.1rem;">flavio.pires.1999@gmail.com</p>
-                            <h4 style="font-weight: normal;">Thank You!</h4>
+                            <h4 id ="thankYou"style="font-weight: normal;"
+                                data-lang-en="Thank You!"
+                                data-lang-pt="Obrigado!"
+                            >Thank You!</h4>
                         </div>
                     </div>
                 </div>
