@@ -1,15 +1,15 @@
 const textArray = [
     "Flavio Pires ",
     "a Web Developer ",
-    "Full Stack Developer ",
-    "Frontend Developer ",
-    "Backend Developer ",
-    "UX Designer ",
-    "Creative Coder ",
-    "Tech Problem Solver ",
-    "Software Enthusiast ",
-    "Web Designer ",
-    "Agile Team Player "
+    "a Full Stack Developer ",
+    "a Frontend Developer ",
+    "a Backend Developer ",
+    "a UX Designer ",
+    "a Creative Coder ",
+    "a Tech Problem Solver ",
+    "a Software Enthusiast ",
+    "a Web Designer ",
+    "a Agile Team Player "
 ];
 let textIndex = 0;
 let charIndex = 0;
@@ -156,6 +156,9 @@ function setLanguage(language) {
 
     const aboutTitle = document.getElementById('aboutTitle');
     aboutTitle.innerText = aboutTitle.getAttribute(`data-lang-${language}`);
+
+    const specializingTitle = document.getElementById('specializingTitle');
+    specializingTitle.innerText = specializingTitle.getAttribute(`data-lang-${language}`);
 
 
     }

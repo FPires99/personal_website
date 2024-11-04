@@ -75,3 +75,8 @@
 .logo:hover + .description {
     opacity: 1;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
