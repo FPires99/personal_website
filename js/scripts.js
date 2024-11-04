@@ -1,4 +1,16 @@
-const textArray = ["Flavio Pires ", "a Web Developer ", "IT Support "];
+const textArray = [
+    "Flavio Pires ",
+    "a Web Developer ",
+    "Full Stack Developer ",
+    "Frontend Developer ",
+    "Backend Developer ",
+    "UX Designer ",
+    "Creative Coder ",
+    "Tech Problem Solver ",
+    "Software Enthusiast ",
+    "Web Designer ",
+    "Agile Team Player "
+];
 let textIndex = 0;
 let charIndex = 0;
 let currentText = '';
@@ -141,6 +153,9 @@ function setLanguage(language) {
 
     const thankYou = document.getElementById('thankYou');
     thankYou.innerText = thankYou.getAttribute(`data-lang-${language}`);
+
+    const aboutTitle = document.getElementById('aboutTitle');
+    aboutTitle.innerText = aboutTitle.getAttribute(`data-lang-${language}`);
 
 
     }

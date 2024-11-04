@@ -36,35 +36,35 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item me-5">
                         <a id ="navbarHome"class="nav-link" href="#home"
-                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            style=" font-size: 24px"
                             data-lang-en="Home"
                             data-lang-pt="Início"
                             >Home</a>
                     </li>
                     <li class="nav-item me-5">
                         <a id="navbarAbout"class="nav-link" href="#about"
-                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            style=" font-size: 24px"
                             data-lang-en="About"
                             data-lang-pt="Sobre mim"
                             >About</a>
                     </li>
                     <li class="nav-item me-5">
                         <a id= "navbarEducation"class="nav-link" href="#education"
-                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            style=" font-size: 24px"
                             data-lang-en="Education"
                             data-lang-pt="Educação"
                             >Education</a>
                     </li>
                     <li class="nav-item me-5">
                         <a id="navbarSkills"class="nav-link" href="#skills"
-                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            style=" font-size: 24px"
                             data-lang-en="Skills"
                             data-lang-pt="Habilidades"
                             >Skills</a>
                     </li>
                     <li class="nav-item me-5">
                         <a id="navbarContact" class="nav-link" href="#contact"
-                            style="font-family: 'Lobster', cursive; font-size: 24px"
+                            style=" font-size: 24px"
                             data-lang-en="Contact"
                             data-lang-pt="Contacto"
                             >Contact</a>
@@ -148,11 +148,22 @@
     <section id="about" class="text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
         <div class="container-fluid">
             <div class="text-center about-me">
-                <h1>About Me</h1>
-                <h1>photo</h1>
+                <h1 id="aboutTitle"
+                data-lang-en="About Me"
+                data-lang-pt="Sobre Mim"
+                >About Me</h1>
+                <img src="images/IMG_3689.jpeg" alt="A photo of me" 
+                class="img-fluid rounded mx-auto d-block shadow-lg" 
+                style="width: 500px; border: 4px solid #333; padding: 0px; transition: transform 0.3s ease;" 
+                onmouseover="this.style.transform='scale(1.05)'" 
+                onmouseout="this.style.transform='scale(1)'">
+
+
+
+
                 
 
-                <p id="aboutText1" class="lead"
+                <p id="aboutText1" class="lead pt-5"
                     data-lang-en="Dedicated and driven web developer, focused on creating engaging user experiences through clean and practical functioning websites."
                     data-lang-pt="Desenvolvedor apaixonado com talento para criar experiências de usuário envolventes.">
                     Dedicated and driven web developer, focused on creating engaging user experiences through clean and practical functioning websites.
@@ -178,15 +189,17 @@
                     motivation within both my professional and academic routes, I feel prepared to contribute my upstanding 
                     skills and further my professional abilities in an opportunity to work as a Web Developer."
                     
-                    data-lang-pt="Bem-vindo ao meu site profissional! Sou um desenvolvedor web de 25 anos, nascido e criado 
-                    em Portugal. Tenho uma grande paixão pela indústria tecnológica há vários anos e sempre desejei seguir 
-                    uma carreira nesta área desde criança. Sempre demonstrei um forte interesse pelo desenvolvimento web 
-                    e por vários outros temas relacionados com tecnologia, e nunca deixei de perseguir este objetivo – 
-                    desenvolvi continuamente o meu conhecimento através de pesquisa, prática pessoal e estudos académicos 
-                    num país estrangeiro (Reino Unido). Como recém-licenciado em Ciências da Computação, que sempre 
-                    demonstrou dedicação e motivação tanto na minha trajetória profissional como académica, sinto-me 
-                    preparado para contribuir com as minhas competências e desenvolver ainda mais as minhas habilidades 
-                    profissionais numa oportunidade de trabalho como Desenvolvedor Web."
+                    data-lang-pt="Bem vindo ao meu site profissional! Sou um jovem Web Developer recentemente formado, nascido
+                     e criado em Portugal. Partilho uma grande paixão pela indústria tecnológica e desde jovem que manifesto 
+                     o desejo de seguir uma futura carreira nesta área profissional. Há alguns anos que demonstro um forte 
+                     interesse por Web Development (juntamente de outras áreas conectadas á tecnologia), então sempre fiz os 
+                     possíveis para desenvolver as minhas habilidades neste ramo. Ao longo dos últimos 4 anos, desenvolvi os 
+                     meus conhecimentos de uma forma continua, através de pesquisa, prática independente, e a realização de 
+                     estudos académicos superiores num pais estrangeiro (Reino Unido). Como recém-licenciado em Ciências 
+                     da Computação, demonstro a minha dedicação e motivação através da minha trajetória académica, e sinto
+                     me preparado para contribuir as minhas competências numa oportunidade que me permita partilhar as 
+                     minhas paixões, e me apoie a continuar a desenvolver as minhas habilidades profissionais como Web Developer."
+
                      
                     style="padding-top: 50px; padding-bottom: 50px; max-width: 900px; text-align: center; margin: 0 auto;">
                     
@@ -228,10 +241,11 @@
                         and networks, providing a broad understanding of the key areas in Computer Science. I developed a 
                         strong foundation in front-end and back-end web technologies, gaining hands-on experience in modern 
                         frameworks and tools. I also achieved first class grades in web development modules."
-                        data-lang-pt="Este curso incorporou vários módulos de engenharia de software, desenvolvimento web 
-                        e redes, proporcionando uma compreensão ampla das áreas-chave em Ciências da Computação. Desenvolvi
-                         uma base sólida em tecnologias de front-end e back-end, ganhando experiência prática com frameworks 
-                         e ferramentas modernas. Além disso, obtive classificações de primeira classe nos módulos de desenvolvimento web."
+                        data-lang-pt="Este curso incorporou vários módulos de engenharia de software e desenvolvimento de 
+                        web e redes, o que me proporcionou uma ampla compreensão das áreas-chave em Ciências da Computação. Desenvolvi 
+                        habilidades básicas em tecnologias de front-end e back-end, o que me permitiu adquirir experiência prática em 
+                        frameworks e outras ferramentas modernas. 
+                        Na conclusão deste curso, fui atribuído classificações de Primeira Classe (1:1) nos módulos de Web Development."
 
                         >This course incorporated numerous modules on software engineering, web development, and 
                             networks, providing a broad understanding of the key areas in Computer Science. I 
@@ -243,7 +257,7 @@
                         style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
                         <h3>Externato Dom Fuas Roupinho</h3>
                         <h4 id="educationSecondary"
-                            data-lang-en=" Secondary Education Diploma: IT Technician - Systems"
+                            data-lang-en=" Secondary Education Diploma:"
                             data-lang-pt="Diploma de Ensino Secundário: Técnico de Informática - Sistemas"
                         >Secondary Education Diploma: </h4>
 
@@ -259,10 +273,10 @@
                             of local networks, peripheral devices, and internal computer architecture. Developed proficiency in C/C++ and Java, focusing 
                             on core programming concepts such as loops, functions, data structures, and object-oriented programming was also a central part of this programme."
                             
-                            data-lang-pt="Algumas das principais áreas de foco deste curso incluíram a instalação, configuração e gestão de sistemas operativos 
-                            e de sistemas de bases de dados. A arquitetura de computadores e as redes também foram exploradas, incluindo a instalação e configuração 
-                            de redes locais, dispositivos periféricos e arquitetura interna de computadores. Desenvolver proficiência em C/C++ e Java, com foco em conceitos 
-                            básicos de programação, como ciclos, funções, estruturas de dados e programação orientada a objetos, também foi uma parte central deste programa."
+                            data-lang-pt="Algumas das principais áreas de foco deste curso profissional incluíram a instalação, configuração e gestão de sistemas operativos 
+                            e sistemas de bases de dados. A arquitetura de computadores e redes também foram exploradas, expecificando-se na arquitetura interna de computadores, 
+                            instalação e configuração de redes locais, e dispositivos periféricos. O desenvolvimento de proficiência em C/C++ e Java, com foco em conceitos 
+                            básicos de programação como ciclos, funções, estruturas de dados e programação orientado a objetos foram também uma parte central destes programa."
 
                         >Some of the key focus areas of this course included installation, configuration, and management of operating systems 
                             and database systems. Computer architecture and networks were also explored, including the installation and configuration 
@@ -292,11 +306,11 @@
                             specific software’s and creating backups in the designated devices, as well as creating an inventory 
                             of all of the IT equipment in the company to facilitate organized tracking."
                             
-                            data-lang-pt ="Durante este estágio, tive a oportunidade de desenvolver competências no local de trabalho, 
-                            reparando ou resolvendo problemas técnicos no equipamento de TI utilizado no local de trabalho. 
-                            Também fui encarregado de preparar novo equipamento para os funcionários usarem em suas tarefas diárias, 
-                            como instalar softwares específicos e criar backups nos dispositivos designados, bem como criar um inventário 
-                            de todo o equipamento de TI na empresa para facilitar o rastreamento organizado."
+                            data-lang-pt ="Durante este estágio profissional, tive a oportunidade de desenvolver competências dentro do espaço
+                             de trabalho, com a reparação ou resolução de problemas técnicos nos equipamentos de TI utilizados pelos trabalhadores 
+                             do local. Também fui encarregado de preparar novo equipamento para os funcionários usarem em suas tarefas diárias, como 
+                             instalar softwares específicos e criar backups nos dispositivos designados. Por último, tive a responsabilidade de criar 
+                             um inventário que incorporasse todo o equipamento TI da empresa, para facilitar o rastreamento organizado."
 
                             >During this internship I was provided with the opportunity to develop skills within the workplace, 
                             by repairing or resolving technical issues in the IT equipment used within the workplace. I was 
@@ -441,7 +455,7 @@
                     <div class="row justify-content-center my-5">
                         <div class="col-lg-8">
                             <form action="https://formspree.io/f/mdkokwbl" method="POST">
-                                <label for="email" class="form-label">Email address</label>
+                                <label for="email" class="form-label">Email</label>
                                 <div class="mb-4 input-group">
                                     <span class="input-group-text">
                                         <i class="bi bi-person-circle"></i>
@@ -494,7 +508,7 @@
                             </span>
                             <h4 id ="sendEmail"style="font-weight: bold;"
                                 data-lang-en="Email me"
-                                data-lang-pt="Mande um e-mail."
+                                data-lang-pt="Envie um email para:"
                             >Email me</h4>
                             <p style="font-size: 1.1rem;">flavio.pires.1999@gmail.com</p>
                             <h4 id ="thankYou"style="font-weight: normal;"
