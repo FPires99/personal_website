@@ -60,9 +60,9 @@ function setLanguage(language) {
 
     // Update flag icon
     if (language === 'en') {
-        flagIcon.src = '/images/UkLogo.png';
+        flagIcon.src = 'images/UkLogo.png';
     } else if (language === 'pt') {
-        flagIcon.src = '/images/PTlogo.png';
+        flagIcon.src = 'images/PTlogo.png';
     }
 
     
