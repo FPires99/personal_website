@@ -4,547 +4,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Flávio Pires · Web Developer</title>
+    <meta name="description"
+        content="Flávio Pires: Computer Science graduate (BSc Hons, Leeds Beckett University) and full-stack web developer working with JavaScript, React, Next.js, PHP and Laravel.">
+    <meta property="og:title" content="Flávio Pires · Web Developer">
+    <meta property="og:description"
+        content="Computer Science graduate and full-stack web developer. Open to junior web developer roles.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta name="theme-color" content="#1f6f54">
+    <link rel="icon" href="images/logov2.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scripts.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    </style>
-
-    <title>Document</title>
 </head>
 
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-
-
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="80" tabindex="0">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm justify-content-end fixed-top" style="background-color: hsl(155, 21%, 49%);">
-        <div class="container-fluid">
-            <h1 style="font-family: 'Lobster', cursive;">FP</h1>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main">
+            <a class="brand" href="#home" aria-label="Flávio Pires, home">FP<span class="brand-dot">.</span></a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+                aria-label="Open menu">
+                <span></span><span></span>
             </button>
 
-            <div class="collapse navbar-collapse text-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item me-5">
-                        <a id ="navbarHome"class="nav-link" href="#home"
-                            style=" font-size: 24px"
-                            data-lang-en="Home"
-                            data-lang-pt="Início"
-                            >Home</a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section id="home" class="hero container">
+            <div class="hero-text">
+                <p class="availability"><span class="pulse" aria-hidden="true"></span>
+                    <span data-i18n="hero.available">Open to junior web developer roles · UK, Portugal &amp; remote</span>
+                </p>
+                <h1>
+                    <span data-i18n="hero.greeting">Hi, I'm</span> Flávio Pires.<br>
+                    <span class="accent" data-i18n="hero.role">Full-stack web developer.</span>
+                </h1>
+                <p class="lead" data-i18n="hero.intro">
+                    Computer Science graduate (BSc Hons, Leeds Beckett University) who builds responsive,
+                    user-focused web apps with JavaScript, React, Next.js, PHP and Laravel.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="files/Flavio Pires1.pdf" target="_blank" rel="noopener">
+                        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14" /></svg>
+                        <span data-i18n="hero.cv">Download CV</span>
+                    </a>
+                    <a class="btn btn-ghost" href="#contact" data-i18n="hero.contact">Get in touch</a>
+                </div>
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/in/flavio-j-f-pires/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="fill"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" /></svg>
+                        </a></li>
+                    <li><a href="https://github.com/FPires99" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" class="fill"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z" /></svg>
+                        </a></li>
+                    <li><a href="mailto:flavio.pires.1999@gmail.com" aria-label="Email">
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="hero-photo">
+                <img src="images/profile.jpg" alt="Portrait of Flávio Pires" width="750" height="1000">
+            </div>
+        </section>
+
+        <!-- Quick facts -->
+        <section class="facts container" aria-label="Quick facts">
+            <dl>
+                <div><dt data-i18n="facts.degree">Degree</dt><dd>BSc (Hons) Computer Science, 2:1</dd></div>
+                <div><dt data-i18n="facts.focus">Focus</dt><dd data-i18n="facts.focusValue">Full-stack web development</dd></div>
+                <div><dt data-i18n="facts.languages">Languages</dt><dd data-i18n="facts.languagesValue">English &amp; Portuguese (fluent)</dd></div>
+                <div><dt data-i18n="facts.location">Based in</dt><dd>Portugal</dd></div>
+            </dl>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section container">
+            <h2 class="section-title"><span class="num">01</span> <span data-i18n="about.title">About me</span></h2>
+            <div class="about-grid">
+                <div class="prose">
+                    <p data-i18n="about.p1">
+                        I'm a web developer from Portugal who moved to the UK to study Computer Science at Leeds
+                        Beckett University. There I focused on full-stack web development and earned first-class
+                        marks in my web development modules.
+                    </p>
+                    <p data-i18n="about.p2">
+                        I enjoy the whole journey of a web app: designing clean, accessible interfaces, building
+                        the back end and database behind them, and making everything fast and responsive. My final-year
+                        project compared Next.js and Laravel by building the same complete website in both.
+                    </p>
+                    <p data-i18n="about.p3">
+                        I'm now looking to join a team where I can ship real products, learn from experienced
+                        engineers and keep growing as a developer.
+                    </p>
+                </div>
+                <ul class="strengths">
+                    <li>
+                        <h3 data-i18n="about.s1t">Full-stack</h3>
+                        <p data-i18n="about.s1d">Front end in React/Next.js, back end in PHP/Laravel or Node.js, data in MySQL.</p>
                     </li>
-                    <li class="nav-item me-5">
-                        <a id="navbarAbout"class="nav-link" href="#about"
-                            style=" font-size: 24px"
-                            data-lang-en="About"
-                            data-lang-pt="Sobre mim"
-                            >About</a>
+                    <li>
+                        <h3 data-i18n="about.s2t">User-focused</h3>
+                        <p data-i18n="about.s2d">Responsive, accessible layouts that work on every screen.</p>
                     </li>
-                    <li class="nav-item me-5">
-                        <a id= "navbarEducation"class="nav-link" href="#education"
-                            style=" font-size: 24px"
-                            data-lang-en="Education"
-                            data-lang-pt="Educação"
-                            >Education</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a id="navbarSkills"class="nav-link" href="#skills"
-                            style=" font-size: 24px"
-                            data-lang-en="Skills"
-                            data-lang-pt="Habilidades"
-                            >Skills</a>
-                    </li>
-                    <li class="nav-item me-5">
-                        <a id="navbarContact" class="nav-link" href="#contact"
-                            style=" font-size: 24px"
-                            data-lang-en="Contact"
-                            data-lang-pt="Contacto"
-                            >Contact</a>
+                    <li>
+                        <h3 data-i18n="about.s3t">Team player</h3>
+                        <p data-i18n="about.s3d">Experienced with Git workflows and Agile/Scrum from university projects.</p>
                     </li>
                 </ul>
+            </div>
+        </section>
 
-                <div class="dropdown mt-2 mt-md-0">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img id="flag-icon" src="images/UkLogo.png" alt="Language Flag" width="20" height="20">
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            <a class="dropdown-item" href="#" onclick="setLanguage('en')">
-                                <img src="images/UkLogo.png" alt="UK Flag" width="10" height="10"> English
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#" onclick="setLanguage('pt')">
-                                <img src="images/PTlogo.png" alt="Portugal Flag" width="10" height="10"> Portuguese
-                            </a>
-                        </li>
+        <!-- Skills -->
+        <section id="skills" class="section container">
+            <h2 class="section-title"><span class="num">02</span> <span data-i18n="skills.title">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Front-end</h3>
+                    <ul class="chips">
+                        <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React</li><li>Next.js</li>
+                        <li>Tailwind CSS</li><li>Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Back-end</h3>
+                    <ul class="chips">
+                        <li>PHP</li><li>Laravel</li><li>Node.js</li><li>Python</li><li>C#</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.data">Databases</h3>
+                    <ul class="chips">
+                        <li>MySQL</li><li>phpMyAdmin</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.tools">Tools &amp; other</h3>
+                    <ul class="chips">
+                        <li>Git</li><li>GitHub</li><li>VS Code</li><li>Kotlin</li><li>Agile / Scrum</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Home Section -->
-    <section id="home" class="container-fluid d-flex align-items-center" style="min-height: 100vh; padding-top: 80px;"
-        style="padding-top: 80px;">
-        <div class="row align-items-center g-0 w-100">
-            <!-- Text Section -->
-            <div class="col-12 col-md-7 text-center py-4">
-                <h1 class="display-1">
-                    Hello, I'm <span id="dynamic-text" class="text-success">Flavio Pires</span>
-                </h1>
-                <p id="introHome" class="lead"
-                data-lang-en="I'm a web developer and designer focused on building responsive, user-centered websites with clean and modern design."
-                data-lang-pt="Sou um desenvolvedor web e designer, focado na criação de websites responsivos e centrados no utilizador, com um design moderno e limpo.">
-                I'm a web developer and designer focused on building responsive, user-centered websites with clean and modern design.
-                </p>
-
-
-
-                <!-- View CV Button -->
-                <a id="cv-button" class="btn btn-success mb-4 text-white" href="files/Flavio Pires1.pdf" target="_blank"
-                    rel="noopener" data-lang-en="View CV" data-lang-pt="Ver CV">
-                    View CV
-                </a>
-
-
-
-
-                <!-- Social Links -->
-                <div class="social-links mt-3">
-                    <a class="btn btn-outline-dark btn-floating m-1" href="mailto:flavio@gmail.com" role="button"
-                        aria-label="Email">
-                        <i class="bi bi-google"></i>
-                    </a>
-                    <a class="btn btn-outline-dark btn-floating m-1"
-                        href="https://www.linkedin.com/in/flavio-j-f-pires/" role="button" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                    <a class="btn btn-outline-dark btn-floating m-1" href="https://github.com/FPires99" role="button"
-                        aria-label="GitHub">
-                        <i class="bi bi-github"></i>
-                    </a>
-                </div>
+        <!-- Projects -->
+        <section id="projects" class="section container">
+            <h2 class="section-title"><span class="num">03</span> <span data-i18n="projects.title">Projects</span></h2>
+            <div class="projects-grid">
+                <article class="project">
+                    <p class="project-kicker" data-i18n="projects.p1k">Final-year project · BSc dissertation</p>
+                    <h3 data-i18n="projects.p1t">Next.js vs Laravel: one website, two stacks</h3>
+                    <p data-i18n="projects.p1d">
+                        Built the same complete website twice, once with Next.js (React) and once with Laravel (PHP),
+                        then compared them on developer experience, performance, structure and maintainability.
+                    </p>
+                    <ul class="chips small">
+                        <li>Next.js</li><li>React</li><li>Laravel</li><li>PHP</li><li>MySQL</li>
+                    </ul>
+                </article>
+                <article class="project">
+                    <p class="project-kicker" data-i18n="projects.p2k">Personal project</p>
+                    <h3 data-i18n="projects.p2t">This portfolio</h3>
+                    <p data-i18n="projects.p2d">
+                        A fast, dependency-free, responsive site with an English/Portuguese language switch,
+                        light and dark themes and accessible markup. Hosted on GitHub Pages.
+                    </p>
+                    <ul class="chips small">
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+                    </ul>
+                    <p class="project-links">
+                        <a href="https://github.com/FPires99/personal_website" target="_blank" rel="noopener"
+                            data-i18n="projects.code">View code →</a>
+                    </p>
+                </article>
             </div>
+        </section>
 
-            <!-- Image Section -->
-            <div class="col-12 col-md-5 p-0 d-flex justify-content-end align-items-start position-relative">
-                <img src="images/IMG_6684.jpeg" class="img-fluid position-md-absolute my-photo" alt="Photo of Flavio Pires">
+        <!-- Experience & Education -->
+        <section id="experience" class="section container">
+            <h2 class="section-title"><span class="num">04</span> <span data-i18n="exp.title">Experience &amp; education</span></h2>
+            <ol class="timeline">
+                <li>
+                    <p class="when">2021 – 2024</p>
+                    <div>
+                        <h3 data-i18n="exp.uniT">BSc (Hons) Computer Science, 2:1</h3>
+                        <p class="where">Leeds Beckett University · Leeds, UK</p>
+                        <ul>
+                            <li data-i18n="exp.uni1">Strong practical focus on full-stack web development, software engineering and networks.</li>
+                            <li data-i18n="exp.uni2">First-class marks in web development modules.</li>
+                            <li data-i18n="exp.uni3">Dissertation: comparing Next.js and Laravel by building a complete website in each.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p class="when">2017 – 2020</p>
+                    <div>
+                        <h3 data-i18n="exp.schoolT">Vocational Diploma, IT Technician (Systems)</h3>
+                        <p class="where">Externato Dom Fuas Roupinho · Nazaré, PT</p>
+                        <ul>
+                            <li data-i18n="exp.school1">Networks, operating systems, databases and computer architecture.</li>
+                            <li data-i18n="exp.school2">Programming foundations in C, C++ and Java, including object-oriented programming.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p class="when">2019</p>
+                    <div>
+                        <h3 data-i18n="exp.internT">IT Intern</h3>
+                        <p class="where">Dayton Progress · Nazaré, PT</p>
+                        <ul>
+                            <li data-i18n="exp.intern1">Provided technical support and repaired IT equipment across the company.</li>
+                            <li data-i18n="exp.intern2">Set up new workstations and backups for employees.</li>
+                            <li data-i18n="exp.intern3">Supported improvements to software used in production and built a full IT asset inventory.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section container">
+            <div class="contact-card">
+                <div class="contact-intro">
+                    <h2 data-i18n="contact.title">Let's work together</h2>
+                    <p data-i18n="contact.text">
+                        Hiring for a web developer role, or have a project in mind? Send me a message and I'll get
+                        back to you within a day or two.
+                    </p>
+                    <a class="contact-email" href="mailto:flavio.pires.1999@gmail.com">flavio.pires.1999@gmail.com</a>
+                    <a class="contact-email" href="https://www.linkedin.com/in/flavio-j-f-pires/" target="_blank"
+                        rel="noopener">linkedin.com/in/flavio-j-f-pires</a>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/mdkokwbl" method="POST">
+                    <label>
+                        <span data-i18n="contact.name">Name</span>
+                        <input type="text" name="name" autocomplete="name" required>
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+                    <label>
+                        <span data-i18n="contact.message">Message</span>
+                        <textarea name="message" rows="5" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit" data-i18n="contact.send">Send message</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-
-
-   <!-- About -->
-<section id="about" class="text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
-    <div class="container py-5">
-        <div class="text-center">
-            <h1 id="aboutTitle" style="font-family: 'Lobster'; font-size: 70px;"
-                data-lang-en="About Me"
-                data-lang-pt="Sobre Mim">
-                About Me
-            </h1>
-        </div>
-
-        <div class="row align-items-center py-5">
-            <!-- Imagem -->
-            <div class="col-md-6 d-flex justify-content-center">
-                <img src="images/IMG_6666.jpeg" alt="A photo of me"
-                     class="img-fluid rounded shadow-lg"
-                     style="width: 300px; transition: transform 0.3s ease;"
-                     onmouseover="this.style.transform='scale(1.05)'"
-                     onmouseout="this.style.transform='scale(1)'" />
-            </div>
-
-            <!-- Texto -->
-            <div class="col-md-6">
-                <p id="aboutText2" class="lead mb-4"
-                   data-lang-en="Welcome to my professional website! I am a 25-year-old web developer, who was born and raised in Portugal. I have
-                    been passionate about the Tech industry for several years, and have desired to pursue a career in this field since I was a young 
-                    child. I always demonstrated a strong interest towards web development and several other tech-related subjects, and never failed 
-                    to pursue the goal – I’ve continuously developed my knowledge through research, personal practice, and the pursuit of academic 
-                    studies in a foreign country (UK). As a recent graduate of Computer Science who has always expressed dedication and motivation 
-                    within both my professional and academic routes, I feel prepared to contribute my upstanding skills and further my professional 
-                    abilities in an opportunity to work as a Web Developer."
-                   data-lang-pt="Bem vindo ao meu site profissional! Sou um jovem Web Developer recentemente formado, nascido e criado em Portugal.
-                    Partilho uma grande paixão pela indústria tecnológica e desde jovem que manifesto o desejo de seguir uma futura carreira nesta 
-                    área profissional. Há alguns anos que demonstro um forte interesse por Web Development (juntamente de outras áreas conectadas à 
-                    tecnologia), então sempre fiz os possíveis para desenvolver as minhas habilidades neste ramo. Ao longo dos últimos 4 anos, desenvolvi 
-                    os meus conhecimentos de uma forma contínua, através de pesquisa, prática independente, e a realização de estudos académicos superiores 
-                    num país estrangeiro (Reino Unido). Como recém-licenciado em  Ciências da Computação, demonstro a minha dedicação e motivação através da 
-                    minha trajetória académica, e sinto-me preparado para contribuir com as minhas competências numa oportunidade que me permita partilhar as 
-                    minhas paixões e me apoie a continuar a desenvolver as minhas habilidades profissionais como Web Developer.">
-                    Welcome to my professional website! I am a 25-year-old web developer, who was born and raised in Portugal. I have been passionate about the Tech industry for several years, and have desired to pursue a career in this field since I was a young child. I always demonstrated a strong interest towards web development and several other tech-related subjects, and never failed to pursue the goal – I’ve continuously developed my knowledge through research, personal practice, and the pursuit of academic studies in a foreign country (UK). As a recent graduate of Computer Science who has always expressed dedication and motivation within both my professional and academic routes, I feel prepared to contribute my upstanding skills and further my professional abilities in an opportunity to work as a Web Developer.
-                </p>
-            </div>
-        </div>
-
-        <p id="aboutText1" class="lead text-dark text-center fw-bold pt-3"
-           data-lang-en="Dedicated and driven web developer, focused on creating engaging user experiences through clean and practical functioning websites."
-           data-lang-pt="Desenvolvedor de web dedicado e diligente, focado na criacao de experiências pragmaticas e visualmente atrativas.">
-            Dedicated and driven web developer, focused on creating engaging user experiences through clean and practical functioning websites.
-        </p>
-
-        <h1 id="specializingTitle" class="text-center" style="font-family: 'Lobster'; font-size: 30px; padding-bottom: 20px"
-            data-lang-en="Specializing in :"
-            data-lang-pt="Especializado em :">
-            Specializing in:
-        </h1>
-
-        <div class="tags d-flex flex-wrap justify-content-center gap-3 pb-5 pt-3">
-            <span class="tag">Web Developer</span>
-            <span class="tag">Frontend Developer</span>
-            <span class="tag">Backend Developer</span>
-            <span class="tag">JavaScript Enthusiast</span>
-            <span class="tag">PHP Developer</span>
-            <span class="tag">CSS Specialist</span>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <section id="education" class="text-dark" style="background-color: #cedbd2; padding: 80px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 mb-4">
-
-                    <h2 id="educationTitle"class="text-center mb-4"
-                        data-lang-en="Education"
-                        data-lang-pt="Educação">Education</h2>
-                    
-
-                    <div class="card mx-auto p-4"
-                        style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-                        <h3>Leeds Beckett University</h3>
-                        <h4 id="university2label"
-                        data-lang-en="BSc in  Computer Science"
-                        data-lang-pt="Licenciatura em Ciências da Computação"
-                        >BSc in  Computer Science</h4>
-                        <p class="text-muted">2021-2023</p>
-
-
-                        <p id="universityDescription"
-                        data-lang-en="This course incorporated numerous modules on software engineering, web development, 
-                        and networks, providing a broad understanding of the key areas in Computer Science. I developed a 
-                        strong foundation in front-end and back-end web technologies, gaining hands-on experience in modern 
-                        frameworks and tools. I also achieved first class grades in web development modules."
-                        data-lang-pt="Este curso incorporou vários módulos de engenharia de software e desenvolvimento de 
-                        web e redes, o que me proporcionou uma ampla compreensão das áreas-chave em Ciências da Computação. Desenvolvi 
-                        habilidades básicas em tecnologias de front-end e back-end, o que me permitiu adquirir experiência prática em 
-                        frameworks e outras ferramentas modernas. 
-                        Na conclusão deste curso, fui atribuído classificações de Primeira Classe (1:1) nos módulos de Web Development."
-
-                        >This course incorporated numerous modules on software engineering, web development, and 
-                            networks, providing a broad understanding of the key areas in Computer Science. I 
-                            developed a strong foundation in front-end and back-end web technologies, gaining hands-on 
-                            experience in modern frameworks and tools. I also achieved first class grades in web development modules.</p>
-                    </div>
-
-                    <div class="card mx-auto p-4 mt-4 "
-                        style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-                        <h3>Externato Dom Fuas Roupinho</h3>
-                        <h4 id="educationSecondary"
-                            data-lang-en=" Secondary Education Diploma:"
-                            data-lang-pt="Diploma de Ensino Secundário: Técnico de Informática - Sistemas"
-                        >Secondary Education Diploma: </h4>
-
-                        <h4 id="educationSecondary2"
-                            data-lang-en="IT Technician - Systems"
-                            data-lang-pt="Técnico de Informática - Sistemas"
-                        >IT Technician - Systems </h4>
-                        <p class="text-muted">2017-2020</p>
-
-                        <p id="secondaryDescription"
-                            data-lang-en="Some of the key focus areas of this course included installation, configuration, and management of operating systems 
-                            and database systems. Computer architecture and networks were also explored, including the installation and configuration 
-                            of local networks, peripheral devices, and internal computer architecture. Developed proficiency in C/C++ and Java, focusing 
-                            on core programming concepts such as loops, functions, data structures, and object-oriented programming was also a central part of this programme."
-                            
-                            data-lang-pt="Algumas das principais áreas de foco deste curso profissional incluíram a instalação, configuração e gestão de sistemas operativos 
-                            e sistemas de bases de dados. A arquitetura de computadores e redes também foram exploradas, expecificando-se na arquitetura interna de computadores, 
-                            instalação e configuração de redes locais, e dispositivos periféricos. O desenvolvimento de proficiência em C/C++ e Java, com foco em conceitos 
-                            básicos de programação como ciclos, funções, estruturas de dados e programação orientado a objetos foram também uma parte central destes programa."
-
-                        >Some of the key focus areas of this course included installation, configuration, and management of operating systems 
-                            and database systems. Computer architecture and networks were also explored, including the installation and configuration 
-                            of local networks, peripheral devices, and internal computer architecture. Developed proficiency in C/C++ and Java, focusing 
-                            on core programming concepts such as loops, functions, data structures, and object-oriented programming was also a central part of this programme.</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 mb-4">
-                    <h2 id = "ExperienceTitle"class="text-center mb-4"
-                        data-lang-en="Experience"
-                        data-lang-pt="Experiência"
-                    >Experience</h2>
-                    <div class="card mx-auto p-4"
-                        style="max-width: 550px; background-color: #ffffff; border-radius: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
-                        <h3>Dayton Progress</h3>
-                        <h4 id="internshipLabel"
-                            data-lang-en="Professional Internship"
-                            data-lang-pt="Estágio Profissional"
-                        >Professional Internship</h4>
-                        <p class="text-muted">2024</p>
-                        <p id="internshipDescription"
-                        
-                            data-lang-en ="During this internship I was provided with the opportunity to develop skills within the workplace, 
-                            by repairing or resolving technical issues in the IT equipment used within the workplace. I was 
-                            also trusted in preparing new equipment for employees to use in their daily duties, such as installing 
-                            specific software’s and creating backups in the designated devices, as well as creating an inventory 
-                            of all of the IT equipment in the company to facilitate organized tracking."
-                            
-                            data-lang-pt ="Durante este estágio profissional, tive a oportunidade de desenvolver competências dentro do espaço
-                             de trabalho, com a reparação ou resolução de problemas técnicos nos equipamentos de TI utilizados pelos trabalhadores 
-                             do local. Também fui encarregado de preparar novo equipamento para os funcionários usarem em suas tarefas diárias, como 
-                             instalar softwares específicos e criar backups nos dispositivos designados. Por último, tive a responsabilidade de criar 
-                             um inventário que incorporasse todo o equipamento TI da empresa, para facilitar o rastreamento organizado."
-
-                            >During this internship I was provided with the opportunity to develop skills within the workplace, 
-                            by repairing or resolving technical issues in the IT equipment used within the workplace. I was 
-                            also trusted in preparing new equipment for employees to use in their daily duties, such as installing 
-                            specific software’s and creating backups in the designated devices, as well as creating an inventory 
-                            of all of the IT equipment in the company to facilitate organized tracking.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills" class="text-dark" style="background-color: #f0e8e87c; padding-top: 80px;">
-        <div class="container-fluid">
-            <!-- <h1>My Web Development Toolkit</h1>
-        <h2>Core Skills</h2> -->
-            <h1 style="text-align: center; padding-bottom: 50px;"id ="skillsTitle"
-            data-lang-en="My Web Development Toolkit"
-            data-lang-pt="Minhas Ferramentas para Desenvolvimento Web"
-            >My Web Development Toolkit</h1>
-            
-
-            <div class="row justify-content-center align-items-center">
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/html.png" alt="HTML logo" width="150" height="150">
-                        </span>
-                        <span class="description">HTML</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/css.png" alt="CSS logo" width="150" height="150">
-                        </span>
-                        <span class="description">CSS</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/javascript.png" alt="JavaScript logo" width="150" height="150">
-                        </span>
-                        <span class="description">JavaScript</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/php.png" alt="PHP logo" width="150" height="150">
-                        </span>
-                        <span class="description">PHP</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/nextjs.png" alt="Next.js logo" width="150" height="150">
-                        </span>
-                        <span class="description">Next.JS</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/laravel.png" alt="Laravel logo" width="150" height="150">
-                        </span>
-                        <span class="description">Laravel</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/bootstrap5.png" alt="Bootstrap logo" width="150" height="150">
-                        </span>
-                        <span class="description">Bootstrap CSS</span>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/tailwind.png" alt="Tailwind CSS logo" width="150" height="150">
-                        </span>
-                        <span class="description">Tailwind CSS</span>
-                    </div>
-                </div>
-            </div>
-
-            <h2 style="text-align: center; padding-top: 50px;"id="skillsTitle2"
-                data-lang-en="Tools and Version Control"
-                data-lang-pt="Ferramentas e Controle de Versão"
-            >Tools and Version Control</h2>
-            <div class="row justify-content-center align-items-center">
-
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/vscode.png" alt="Visual Studio Code logo" width="150" height="150">
-                        </span>
-                        <span class="description">Visual Studio Code</span>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 text-center">
-                    <div class="logo-container" style="margin: 30px;">
-                        <span class="logo">
-                            <img src="images/github.png" alt="GitHub logo" width="150" height="150">
-                        </span>
-                        <span class="description">GitHub</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="text-dark pt-5" style="background-image: url('/images/sage.jpg');">
-        <div class="container-fluid">
-            <div class="row justify-content-center align-items-start">
-                <!-- Column for the form -->
-                <div class="col-sm-12 col-md-6 text-center mb-5 mb-md-0">
-                    <h1 id="contactQuestion"class="mb-4"
-                        data-lang-en="Want to get in touch?"
-                        data-lang-pt="Quer entrar em contato?"
-                    >Want to get in touch?</h1>
-                    <p id="formText2" class="lead"
-                    data-lang-en="Fill out the form to contact me through this website"
-                    data-lang-pt="Preencha o formulário para entrar em contato comigo através deste site"
-                    >Fill out the form to contact me through this website</p>
-                    <div class="row justify-content-center my-5">
-                        <div class="col-lg-8">
-                            <form action="https://formspree.io/f/mdkokwbl" method="POST">
-                                <label for="email" class="form-label">Email</label>
-                                <div class="mb-4 input-group">
-                                    <span class="input-group-text">
-                                        <i class="bi bi-person-circle"></i>
-                                    </span>
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="e.g. flavio@gmail.com" required>
-                                </div>
-
-                                <label id ="nameLabel"for="name" class="form-label
-                                data-lang-en="Name"
-                                data-lang-pt="Nome"
-                                ">Name</label>
-                                <div class="mb-4 input-group">
-                                    <span class="input-group-text">
-                                        <i class="bi bi-chat-right"></i>
-                                    </span>
-                                    <input type="text" class="form-control" id="name" name="name"
-                                        placeholder="e.g. Flavio" required>
-                                </div>
-
-                                <label id= "formText"for="query" class="form-label"
-                                data-lang-en="Your query..."
-                                data-lang-pt="Sua pergunta..."
-                                >Your query...</label>
-                                <textarea id="query" class="form-control" name="query" style="height: 140px;"
-                                    required></textarea>
-                                <div class="mb-4 pt-3">
-                                    <button id= "buttonSubmit"type="submit" class="btn mb-4 text-white"
-                                        style="background-color: hsl(155, 21%, 49%);"
-                                        data-lang-en="Submit"
-                                        data-lang-pt="Enviar"
-                                        >Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column for the alternative contact method -->
-                <div class="col-sm-12 col-md-5 text-center mb-5 mb-md-0">
-                    <h1 id ="optionLabel"class="mb-5"
-                        data-lang-en="Alternatively"
-                        data-lang-pt="Opcionalmente"
-                    >Alternatively</h1>
-                    <div class="card mx-auto mb-5"
-                        style="max-width: 300px; min-height: 400px;background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                        <div class="card-body" style="padding: 20px;">
-                            <span style="font-size: 50px; margin-bottom: 20px; display: inline-block;">
-                                <i class="bi bi-envelope-at"></i>
-                            </span>
-                            <h4 id ="sendEmail"style="font-weight: bold;"
-                                data-lang-en="Email me"
-                                data-lang-pt="Envie um email para:"
-                            >Email me</h4>
-                            <p style="font-size: 1.1rem;">flavio.pires.1999@gmail.com</p>
-                            <h4 id ="thankYou"style="font-weight: normal;"
-                                data-lang-en="Thank You!"
-                                data-lang-pt="Obrigado!"
-                            >Thank You!</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="text-center text-white bg-dark">
-        <div class="container-fluid p-4 pb-4">
-
-            <section class="mb-0">
-                <div class="row">
-                    <div class="col-0">
-                        <h6>2024 © Design by Flavio Pires</h3>
-                    </div>
-
-                    <div class="col-12">
-                        <a class="btn btn-outline-light btn-floating m-1" href="mailto:flavio@gmail.com" role="button">
-                            <i class="bi bi-google"></i>
-                        </a>
-
-                        <a class="btn btn-outline-light btn-floating m-1"
-                            href="https://www.linkedin.com/in/flavio-j-f-pires/" role="button">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/FPires99"
-                            role="button">
-                            <i class="bi bi-github"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </section>
-        </div>
+    <footer class="site-footer container">
+        <p>© <span id="year">2026</span> Flávio Pires</p>
+        <a href="#home" data-i18n="footer.top">Back to top ↑</a>
     </footer>
 </body>
+
 </html>

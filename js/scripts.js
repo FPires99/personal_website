@@ -1,167 +1,191 @@
-const textArray = [
-    "Flavio Pires ",
-    "a Web Developer ",
-    "a Full Stack Developer ",
-    "a Frontend Developer ",
-    "a Backend Developer ",
-    "a UX Designer ",
-    "a Creative Coder ",
-    "a Tech Problem Solver ",
-    "a Software Enthusiast ",
-    "a Web Designer ",
-    "a Agile Team Player "
-];
-let textIndex = 0;
-let charIndex = 0;
-let currentText = '';
-let isDeleting = false;
-const dynamicTextSpan = document.getElementById("dynamic-text");
+// Portuguese translations. English is the default text written in index.html,
+// so to add a new translatable element give it a data-i18n key and add the key here.
+const translations = {
+    pt: {
+        "nav.about": "Sobre mim",
+        "nav.skills": "Competências",
+        "nav.projects": "Projetos",
+        "nav.experience": "Percurso",
+        "nav.contact": "Contacto",
 
-function type() {
-    const currentFullText = textArray[textIndex];
+        "hero.available": "Disponível para funções de web developer júnior · Reino Unido, Portugal e remoto",
+        "hero.greeting": "Olá, sou o",
+        "hero.role": "Web developer full-stack.",
+        "hero.intro": "Licenciado em Ciências da Computação (BSc Hons, Leeds Beckett University). Desenvolvo aplicações web responsivas e centradas no utilizador com JavaScript, React, Next.js, PHP e Laravel.",
+        "hero.cv": "Descarregar CV",
+        "hero.contact": "Entrar em contacto",
 
-    // Check if we are deleting or typing
-    if (isDeleting) {
-        currentText = currentFullText.substring(0, charIndex--);
-    } else {
-        currentText = currentFullText.substring(0, charIndex++);
-    }
+        "facts.degree": "Licenciatura",
+        "facts.focus": "Foco",
+        "facts.focusValue": "Desenvolvimento web full-stack",
+        "facts.languages": "Idiomas",
+        "facts.languagesValue": "Português e Inglês (fluente)",
+        "facts.location": "Localização",
 
-    // Update the text content
-    dynamicTextSpan.textContent = currentText;
+        "about.title": "Sobre mim",
+        "about.p1": "Sou um web developer português que se mudou para o Reino Unido para estudar Ciências da Computação na Leeds Beckett University, com foco em desenvolvimento web full-stack. Obtive classificações de primeira classe nos módulos de desenvolvimento web.",
+        "about.p2": "Gosto de todo o percurso de uma aplicação web: desenhar interfaces limpas e acessíveis, construir o back-end e a base de dados, e garantir que tudo é rápido e responsivo. No projeto final comparei Next.js e Laravel, construindo o mesmo website completo com cada um.",
+        "about.p3": "Procuro agora integrar uma equipa onde possa desenvolver produtos reais, aprender com engenheiros experientes e continuar a crescer como developer.",
+        "about.s1t": "Full-stack",
+        "about.s1d": "Front-end em React/Next.js, back-end em PHP/Laravel ou Node.js, dados em MySQL.",
+        "about.s2t": "Foco no utilizador",
+        "about.s2d": "Layouts responsivos e acessíveis que funcionam em qualquer ecrã.",
+        "about.s3t": "Trabalho em equipa",
+        "about.s3d": "Experiência com Git e Agile/Scrum em projetos universitários.",
 
-    // Handle typing completion
-    if (!isDeleting && charIndex === currentFullText.length) {
-        // Pause before starting to delete
-        isDeleting = true;
-        setTimeout(type, 3000); // Wait before starting to delete
-    } else if (isDeleting && charIndex < 0) {
-        // When finished deleting, move to the next text
-        isDeleting = false;
-        textIndex = (textIndex + 1) % textArray.length; // Loop through the array
-        charIndex = 0; // Reset charIndex for the new text
-        setTimeout(type, 1000); // Wait before starting to type the next word
-    } else {
-        
-        setTimeout(type, isDeleting ? 70 : 70); // typing speed
-    }
-}
+        "skills.title": "Competências",
+        "skills.data": "Bases de dados",
+        "skills.tools": "Ferramentas e outros",
 
-// Start the typing effect on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(type, 500); // Start typing after 500ms
+        "projects.title": "Projetos",
+        "projects.p1k": "Projeto final · Licenciatura",
+        "projects.p1t": "Next.js vs Laravel: um website, duas stacks",
+        "projects.p1d": "Construí o mesmo website completo duas vezes, uma com Next.js (React) e outra com Laravel (PHP), e comparei-os em experiência de desenvolvimento, desempenho, estrutura e facilidade de manutenção.",
+        "projects.p2k": "Projeto pessoal",
+        "projects.p2t": "Este portfólio",
+        "projects.p2d": "Um site rápido, responsivo e sem dependências, com alternância entre Inglês e Português, temas claro e escuro e marcação acessível. Alojado no GitHub Pages.",
+        "projects.code": "Ver código →",
+
+        "exp.title": "Percurso",
+        "exp.uniT": "Licenciatura (BSc Hons) em Ciências da Computação, 2:1",
+        "exp.uni1": "Forte componente prática em desenvolvimento web full-stack, engenharia de software e redes.",
+        "exp.uni2": "Classificações de primeira classe nos módulos de desenvolvimento web.",
+        "exp.uni3": "Projeto final: comparação entre Next.js e Laravel através da construção de um website completo com cada um.",
+        "exp.schoolT": "Curso Profissional de Técnico de Informática – Sistemas",
+        "exp.school1": "Redes, sistemas operativos, bases de dados e arquitetura de computadores.",
+        "exp.school2": "Fundamentos de programação em C, C++ e Java, incluindo programação orientada a objetos.",
+        "exp.internT": "Estagiário de IT",
+        "exp.intern1": "Suporte técnico e reparação de equipamentos informáticos da empresa.",
+        "exp.intern2": "Preparação de novos postos de trabalho e backups para os colaboradores.",
+        "exp.intern3": "Apoio à melhoria de software usado na produção e criação de um inventário completo do equipamento de IT.",
+
+        "contact.title": "Vamos trabalhar juntos",
+        "contact.text": "Está a recrutar para uma função de web developer ou tem um projeto em mente? Envie-me uma mensagem e respondo em um ou dois dias.",
+        "contact.name": "Nome",
+        "contact.message": "Mensagem",
+        "contact.send": "Enviar mensagem",
+        "contact.sending": "A enviar…",
+        "contact.ok": "Obrigado! A sua mensagem foi enviada.",
+        "contact.error": "Algo correu mal. Por favor envie-me um email diretamente.",
+
+        "footer.top": "Voltar ao topo ↑",
+    },
+    en: {
+        "contact.sending": "Sending…",
+        "contact.ok": "Thanks! Your message has been sent.",
+        "contact.error": "Something went wrong. Please email me directly instead.",
+    },
+};
+
+const i18nElements = document.querySelectorAll("[data-i18n]");
+i18nElements.forEach((el) => {
+    translations.en[el.dataset.i18n] = el.textContent.trim().replace(/\s+/g, " ");
 });
 
+let currentLang = "en";
 
+function t(key) {
+    return translations[currentLang][key] ?? translations.en[key];
+}
 
+function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    i18nElements.forEach((el) => {
+        el.textContent = t(el.dataset.i18n);
+    });
+    document.querySelectorAll(".lang-switch button").forEach((btn) => {
+        btn.setAttribute("aria-pressed", btn.dataset.lang === lang);
+    });
+    try {
+        localStorage.setItem("lang", lang);
+    } catch (e) {}
+}
 
-function setLanguage(language) {
-    const flagIcon = document.getElementById('flag-icon');
+document.querySelectorAll(".lang-switch button").forEach((btn) => {
+    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+});
 
-    // Update flag icon
-    if (language === 'en') {
-        flagIcon.src = 'images/UkLogo.png';
-    } else if (language === 'pt') {
-        flagIcon.src = 'images/PTlogo.png';
+let savedLang = null;
+try {
+    savedLang = localStorage.getItem("lang");
+} catch (e) {}
+const initialLang = savedLang || (navigator.language.startsWith("pt") ? "pt" : "en");
+if (initialLang !== "en") setLanguage(initialLang);
+
+// Mobile menu
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+function closeMenu() {
+    navMenu.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+}
+
+navToggle.addEventListener("click", () => {
+    const open = navMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", open);
+});
+navMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+
+// Header border once the page is scrolled
+const header = document.querySelector(".site-header");
+const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// Highlight the nav link of the section in view
+const navLinks = document.querySelectorAll(".nav-links a");
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+            link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
+    });
+}, { rootMargin: "-40% 0px -55% 0px" });
+document.querySelectorAll("main section[id]").forEach((s) => sectionObserver.observe(s));
+
+// Fade sections in as they scroll into view
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.12 });
+document.querySelectorAll(".section").forEach((el) => {
+    el.classList.add("reveal");
+    revealObserver.observe(el);
+});
+
+// Contact form: submit to Formspree without leaving the page
+const form = document.querySelector(".contact-form");
+const formStatus = form.querySelector(".form-status");
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const button = form.querySelector("button[type=submit]");
+    button.disabled = true;
+    formStatus.className = "form-status";
+    formStatus.textContent = t("contact.sending");
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error(response.statusText);
+        form.reset();
+        formStatus.classList.add("ok");
+        formStatus.textContent = t("contact.ok");
+    } catch (e) {
+        formStatus.classList.add("error");
+        formStatus.textContent = t("contact.error");
+    } finally {
+        button.disabled = false;
     }
+});
 
-    
-    const aboutTextHome = document.getElementById('introHome');
-    aboutTextHome.innerText = aboutTextHome.getAttribute(`data-lang-${language}`);
-    
-    const aboutTextAbout = document.getElementById('aboutText1');
-    aboutTextAbout.innerText = aboutTextAbout.getAttribute(`data-lang-${language}`);
-
-    const aboutTextAbout2 = document.getElementById('aboutText2');
-    aboutTextAbout2.innerText = aboutTextAbout2.getAttribute(`data-lang-${language}`);
-
-    const educationTitle = document.getElementById('educationTitle');
-    educationTitle.innerText = educationTitle.getAttribute(`data-lang-${language}`);
-
-    const ExperienceTitle = document.getElementById('ExperienceTitle');
-    ExperienceTitle.innerText = ExperienceTitle.getAttribute(`data-lang-${language}`);
-
-    const university2label = document.getElementById('university2label');
-    university2label.innerText = university2label.getAttribute(`data-lang-${language}`);
-
-    const universityDescription = document.getElementById('universityDescription');
-    universityDescription.innerText = universityDescription.getAttribute(`data-lang-${language}`);
-    
-    const educationSecondary = document.getElementById('educationSecondary');
-    educationSecondary.innerText = educationSecondary.getAttribute(`data-lang-${language}`);
-
-    const educationSecondary2 = document.getElementById('educationSecondary2');
-    educationSecondary2.innerText = educationSecondary2.getAttribute(`data-lang-${language}`);
-
-    const secondaryDescription = document.getElementById('secondaryDescription');
-    secondaryDescription.innerText = secondaryDescription.getAttribute(`data-lang-${language}`);
-
-    const internshipLabel = document.getElementById('internshipLabel');
-    internshipLabel.innerText = internshipLabel.getAttribute(`data-lang-${language}`);
-
-    const internshipDescription = document.getElementById('internshipDescription');
-    internshipDescription.innerText = internshipDescription.getAttribute(`data-lang-${language}`);
-
-    const skillsTitle = document.getElementById('skillsTitle');
-    skillsTitle.innerText = skillsTitle.getAttribute(`data-lang-${language}`);
-    
-    const skillsTitle2 = document.getElementById('skillsTitle2');
-    skillsTitle2.innerText = skillsTitle2.getAttribute(`data-lang-${language}`);
-
-    const navbarHome = document.getElementById('navbarHome');
-    navbarHome.innerText = navbarHome.getAttribute(`data-lang-${language}`);
-
-    const navbarAbout = document.getElementById('navbarAbout');
-    navbarAbout.innerText = navbarAbout.getAttribute(`data-lang-${language}`);
-
-    const navbarEducation = document.getElementById('navbarEducation');
-    navbarEducation.innerText = navbarEducation.getAttribute(`data-lang-${language}`);
-
-    const navbarSkills = document.getElementById('navbarSkills');
-    navbarSkills.innerText = navbarSkills.getAttribute(`data-lang-${language}`);
-
-    const navbarContact = document.getElementById('navbarContact');
-    navbarContact.innerText = navbarContact.getAttribute(`data-lang-${language}`);
-
-    const cvButton = document.getElementById('cv-button');
-    cvButton.innerText = cvButton.getAttribute(`data-lang-${language}`);
-    
-// Left side of contact page
-
-    const contactQuestion = document.getElementById('contactQuestion');
-    contactQuestion.innerText = contactQuestion.getAttribute(`data-lang-${language}`);
-
-    const formText2 = document.getElementById('formText2');
-    formText2.innerText = formText2.getAttribute(`data-lang-${language}`);
-
-    const nameLabel = document.getElementById('nameLabel');
-    nameLabel.innerText = nameLabel.getAttribute(`data-lang-${language}`);
-
-    const formText = document.getElementById('formText');
-    formText.innerText = formText.getAttribute(`data-lang-${language}`);
-
-    const buttonSubmit = document.getElementById('buttonSubmit');
-    buttonSubmit.innerText = buttonSubmit.getAttribute(`data-lang-${language}`);
-
-
-    // Right side of contact page
-    const optionLabel = document.getElementById('optionLabel');
-    optionLabel.innerText = optionLabel.getAttribute(`data-lang-${language}`);
-
-    const sendEmail = document.getElementById('sendEmail');
-    sendEmail.innerText = sendEmail.getAttribute(`data-lang-${language}`);
-
-    const thankYou = document.getElementById('thankYou');
-    thankYou.innerText = thankYou.getAttribute(`data-lang-${language}`);
-
-    const aboutTitle = document.getElementById('aboutTitle');
-    aboutTitle.innerText = aboutTitle.getAttribute(`data-lang-${language}`);
-
-    const specializingTitle = document.getElementById('specializingTitle');
-    specializingTitle.innerText = specializingTitle.getAttribute(`data-lang-${language}`);
-
-
-    }
-
-
-
+document.getElementById("year").textContent = new Date().getFullYear();
