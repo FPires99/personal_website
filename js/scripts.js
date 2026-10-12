@@ -38,6 +38,13 @@ const translations = {
         "skills.tools": "Ferramentas e outros",
 
         "projects.title": "Projetos",
+        "projects.hdk": "Projeto em destaque · Full-stack",
+        "projects.hdt": "HelpDesk Pro: service desk de IT",
+        "projects.hdd": "Um sistema completo de tickets para equipas de suporte de IT. Os colaboradores abrem tickets e recebem ajuda de uma base de conhecimento que sugere soluções enquanto escrevem; os técnicos gerem a fila com prazos, notas internas e respostas guardadas; os administradores gerem utilizadores e relatórios.",
+        "projects.hd1": "Permissões por perfil: colaboradores, técnicos e administradores",
+        "projects.hd2": "Notificações por email e na aplicação, anexos e histórico completo de atividade",
+        "projects.hd3": "Relatórios, exportação CSV e uma API REST com autenticação por token",
+        "projects.hd4": "Mais de 90 testes automáticos e reforço de segurança (CSP, limites de pedidos)",
         "projects.p1k": "Projeto final · Licenciatura",
         "projects.p1t": "Next.js vs Laravel: um website, duas stacks",
         "projects.p1d": "Construí o mesmo website completo duas vezes, uma com Next.js (React) e outra com Laravel (PHP), e comparei-os em experiência de desenvolvimento, desempenho, estrutura e facilidade de manutenção.",

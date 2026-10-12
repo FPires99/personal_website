@@ -632,9 +632,66 @@ svg.fill {
     text-decoration: underline;
 }
 
+/* Featured project: screenshot beside the description */
+.project-featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.project-shot img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform .2s;
+}
+
+.project-shot:hover img {
+    transform: translateY(-2px);
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-body > p:not(.project-kicker):not(.project-links) {
+    color: var(--muted);
+}
+
+.project-points {
+    list-style: none;
+    display: grid;
+    gap: 6px;
+    font-size: .95rem;
+}
+
+.project-points li {
+    position: relative;
+    padding-left: 22px;
+}
+
+.project-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
 @media (max-width: 760px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-featured {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
